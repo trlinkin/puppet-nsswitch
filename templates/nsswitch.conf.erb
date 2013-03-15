@@ -1,0 +1,24 @@
+# This file is controlled by Puppet
+
+passwd:     <%= @_passwd.join(" ") %>
+shadow:     <%= @_shadow.join(" ") %>
+group:      <%= @_group.join(" ") %>
+
+hosts:      <%= @_hosts.join(" ") %>
+
+bootparams: <%= @_bootparams.join(" ") %>
+
+ethers:     <%= @_ethers.join(" ") %>
+netmasks:   <%= @_netmasks.join(" ") %>
+networks:   <%= @_networks.join(" ") %>
+protocols:  <%= @_protocols.join(" ") %>
+rpc:        <%= @_rpc.join(" ") %>
+services:   <%= @_services.join(" ") %>
+
+netgroup:   <%= @_netgroup.join(" ") %>
+
+publickey:  <%= @_publickey.join(" ") %>
+
+automount:  <%= @_automount.join(" ") %>
+aliases:    <%= @_aliases.join(" ") %>
+
