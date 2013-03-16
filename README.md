@@ -12,6 +12,27 @@ These defaults have been verified on the mentioned Distrobutions.
 
 So far, this module has only been tested on CentOS 6.x and Ubuntu 12.4.
 
+Example nsswitch.conf with all defaults for RHEL systems.
+```
+# This file is controlled by Puppet
+
+passwd:     files
+shadow:     files
+group:      files
+hosts:      files dns
+bootparams: nisplus [NOTFOUND=return] files
+ethers:     files
+netmasks:   files
+networks:   files
+protocols:  files
+rpc:        files
+services:   files
+netgroup:   nisplus
+publickey:  nisplus
+automount:  files nisplus
+aliases:    files nisplus
+```
+
 ## nsswitch class
 
 This is the class by which you will manage the nsswitch.conf file. There
