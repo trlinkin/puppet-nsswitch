@@ -1,24 +1,48 @@
 # This file is controlled by Puppet
 
-passwd:     <%= @_passwd.join(" ") %>
-shadow:     <%= @_shadow.join(" ") %>
-group:      <%= @_group.join(" ") %>
-
-hosts:      <%= @_hosts.join(" ") %>
-
-bootparams: <%= @_bootparams.join(" ") %>
-
-ethers:     <%= @_ethers.join(" ") %>
-netmasks:   <%= @_netmasks.join(" ") %>
-networks:   <%= @_networks.join(" ") %>
-protocols:  <%= @_protocols.join(" ") %>
-rpc:        <%= @_rpc.join(" ") %>
-services:   <%= @_services.join(" ") %>
-
-netgroup:   <%= @_netgroup.join(" ") %>
-
-publickey:  <%= @_publickey.join(" ") %>
-
-automount:  <%= @_automount.join(" ") %>
-aliases:    <%= @_aliases.join(" ") %>
+<% if @_passwd -%>
+passwd:     <%= [*@_passwd].join(" ") %>
+<% end -%>
+<% if @_shadow -%>
+shadow:     <%= [*@_shadow].join(" ") %>
+<% end -%>
+<% if @_group -%>
+group:      <%= [*@_group].join(" ") %>
+<% end -%>
+<% if @_hosts -%>
+hosts:      <%= [*@_hosts].join(" ") %>
+<% end -%>
+<% if @_bootparams -%>
+bootparams: <%= [*@_bootparams].join(" ") %>
+<% end -%>
+<% if @_ethers -%>
+ethers:     <%= [*@_ethers].join(" ") %>
+<% end -%>
+<% if @_netmasks -%>
+netmasks:   <%= [*@_netmasks].join(" ") %>
+<% end -%>
+<% if @_networks -%>
+networks:   <%= [*@_networks].join(" ") %>
+<% end -%>
+<% if @_protocols -%>
+protocols:  <%= [*@_protocols].join(" ") %>
+<% end -%>
+<% if @_rpc -%>
+rpc:        <%= [*@_rpc].join(" ") %>
+<% end -%>
+<% if @_services -%>
+services:   <%= [*@_services].join(" ") %>
+<% end -%>
+<% if @_netgroup -%>
+netgroup:   <%= [*@_netgroup].join(" ") %>
+<% end -%>
+<% if @_publickey -%>
+publickey:  <%= [*@_publickey].join(" ") %>
+<% end -%>
+<% if @_automount -%>
+automount:  <%= [*@_automount].join(" ") %>
+<% end -%>
+<% if @_aliases -%>
+aliases:    <%= [*@_aliases].join(" ") %>
+<% end -%>
 
