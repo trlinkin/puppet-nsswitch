@@ -14,6 +14,7 @@ class nsswitch (
   $rpc        = undef,
   $services   = undef,
   $shadow     = undef,
+  $sudoers    = undef,
 ) inherits nsswitch::params {
 
 # We need to figure out if the use provided input or we use defaults.
@@ -24,7 +25,7 @@ class nsswitch (
   }else{
     $_aliases = $nsswitch::params::aliases_default
   }
-  # Determine the value for 
+  # Determine the value for Auto Mounting
   if $automount {
     $_automount = $automount
   }else{
@@ -107,6 +108,12 @@ class nsswitch (
     $_shadow = $shadow
   }else{
     $_shadow = $nsswitch::params::shadow_default
+  }
+  # Determine the value for Sudoers 
+  if $sudoers {
+    $_sudoers = $sudoers
+  }else{
+    $_sudoers = $nsswitch::params::sudoers_default
   }
 
   file { $nsswitch::params::nsswitch_path:

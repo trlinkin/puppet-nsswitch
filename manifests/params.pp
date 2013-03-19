@@ -19,6 +19,7 @@ class nsswitch::params {
                 $rpc_default        = ['files']
                 $services_default   = ['files']
                 $shadow_default     = ['files']
+                $sudoers_default    = undef
     }
     'Ubuntu': {
                 $nsswitch_path = '/etc/nsswitch.conf'
@@ -38,6 +39,7 @@ class nsswitch::params {
                 $rpc_default        = ['db','files']
                 $services_default   = ['db','files']
                 $shadow_default     = ['compat']
+                $sudoers_default    = undef
     }
     default: { fail("${operatingsystem} is not a supported operating system.") }
   }

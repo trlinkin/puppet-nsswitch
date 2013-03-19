@@ -9,6 +9,9 @@ shadow:     <%= [*@_shadow].join(" ") %>
 <% if @_group -%>
 group:      <%= [*@_group].join(" ") %>
 <% end -%>
+<% if @_sudoers -%>
+sudoers:    <%= [*@_sudoers].join(" ") %>
+<% end -%>
 <% if @_hosts -%>
 hosts:      <%= [*@_hosts].join(" ") %>
 <% end -%>
