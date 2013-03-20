@@ -1,6 +1,6 @@
 class nsswitch::params {
 
-  case $operatingsystem {
+  case $::operatingsystem {
     /CentOS|RedHat|Amazon/: {
                 $nsswitch_path = '/etc/nsswitch.conf'
 
@@ -41,6 +41,6 @@ class nsswitch::params {
                 $shadow_default     = ['compat']
                 $sudoers_default    = undef
     }
-    default: { fail("${operatingsystem} is not a supported operating system.") }
+    default: { fail("${::operatingsystem} is not a supported operating system.") }
   }
 }
