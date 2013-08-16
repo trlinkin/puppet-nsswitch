@@ -21,6 +21,26 @@ class nsswitch::params {
                 $shadow_default     = ['files']
                 $sudoers_default    = undef
     }
+    'Fedora': {
+                $nsswitch_path = '/etc/nsswitch.conf'
+
+                $aliases_default    = ['files','nisplus']
+                $automount_default  = ['files','nisplus']
+                $bootparams_default = ['nisplus [NOTFOUND=return]','files']
+                $ethers_default     = ['files']
+                $group_default      = ['files']
+                $hosts_default      = ['files','mdns4_minimal [NOTFOUND=return]','dns']
+                $netgroup_default   = ['nisplus']
+                $netmasks_default   = ['files']
+                $networks_default   = ['files']
+                $passwd_default     = ['files']
+                $protocols_default  = ['files']
+                $publickey_default  = ['nisplus']
+                $rpc_default        = ['files']
+                $services_default   = ['files']
+                $shadow_default     = ['files']
+                $sudoers_default    = undef
+    }
     /Ubuntu|Debian/: {
                 $nsswitch_path = '/etc/nsswitch.conf'
 
