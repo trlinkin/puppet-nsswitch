@@ -21,7 +21,7 @@ class nsswitch::params {
                 $shadow_default     = ['files']
                 $sudoers_default    = undef
     }
-    'Ubuntu': {
+    /Ubuntu|Debian/: {
                 $nsswitch_path = '/etc/nsswitch.conf'
 
                 $aliases_default    = undef
