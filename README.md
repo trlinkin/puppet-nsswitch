@@ -10,7 +10,17 @@ Ubuntu. This module at its very basic will create an nsswitch.conf that
 uses defaults derived from the distrobution provided nsswitch.conf file.
 These defaults have been verified on the mentioned Distrobutions.
 
-So far, this module has only been tested on CentOS 6.x and Ubuntu 12.4.
+### Supported Systems
+This module should be capable of supporting the following systems:
+ * Debian/Ubuntu
+ * RHEL (Centos, RHEL6.x, Amazon)
+ * Fedora
+
+Testing has only confirmed functionality on the following:
+  * Centos 6.x
+  * Ubuntu 12.4
+
+### Usage
 
 Example nsswitch.conf with all defaults for RHEL systems.
 ```
