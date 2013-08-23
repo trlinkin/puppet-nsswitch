@@ -22,26 +22,25 @@ Testing has only confirmed functionality on the following:
 
 ### Usage
 
-Example nsswitch.conf with all defaults for RHEL systems.
-```
-# This file is controlled by Puppet
+## Example nsswitch.conf with all defaults for RHEL systems.
 
-passwd:     files
-shadow:     files
-group:      files
-hosts:      files dns
-bootparams: nisplus [NOTFOUND=return] files
-ethers:     files
-netmasks:   files
-networks:   files
-protocols:  files
-rpc:        files
-services:   files
-netgroup:   nisplus
-publickey:  nisplus
-automount:  files nisplus
-aliases:    files nisplus
-```
+   # This file is controlled by Puppet
+
+    passwd:     files
+    shadow:     files
+    group:      files
+    hosts:      files dns
+    bootparams: nisplus [NOTFOUND=return] files
+    ethers:     files
+    netmasks:   files
+    networks:   files
+    protocols:  files
+    rpc:        files
+    services:   files
+    netgroup:   nisplus
+    publickey:  nisplus
+    automount:  files nisplus
+    aliases:    files nisplus
 
 ## nsswitch class
 
@@ -52,41 +51,38 @@ of options with hiera. When using an array, each element should be the
 lookup service followed by the reaction statement.
 
 Available parameters are:
-```
-passwd
-group
-shadow
-hosts
-bootparams
-aliases
-automount
-ethers
-netgroup
-netmasks
-network
-protocols
-publickey
-rpc
-services
-```
+
+* passwd
+* group
+* shadow
+* hosts
+* bootparams
+* aliases
+* automount
+* ethers
+* netgroup
+* netmasks
+* network
+* protocols
+* publickey
+* rpc
+* services
+
 
 For more information on NSS, please see the man pages. `man 5 nsswitch.conf`
 
 ## Examples
 
-```
-# defaults only
-include nsswitch
+    # defaults only
+    include nsswitch
 
-# setting a simple lookup
-class { 'nsswitch':
-  publickey => 'nis',
-}
+    # setting a simple lookup
+    class { 'nsswitch':
+      publickey => 'nis',
+    }
 
-# 'hosts' lookups contain a reaction statement for the 'dns' service
-class { 'nsswitch':
-  passwd => ['ldap','files'],
-  hosts  => ['dns [!UNAVAIL=return]','files'],
-}
-```
-
+    # 'hosts' lookups contain a reaction statement for the 'dns' service
+    class { 'nsswitch':
+      passwd => ['ldap','files'],
+      hosts  => ['dns [!UNAVAIL=return]','files'],
+    }
