@@ -22,27 +22,7 @@ Testing has only confirmed functionality on the following:
 
 ### Usage
 
-## Example nsswitch.conf with all defaults for RHEL systems
-
-    # This file is controlled by Puppet
-
-    passwd:     files
-    shadow:     files
-    group:      files
-    hosts:      files dns
-    bootparams: nisplus [NOTFOUND=return] files
-    ethers:     files
-    netmasks:   files
-    networks:   files
-    protocols:  files
-    rpc:        files
-    services:   files
-    netgroup:   nisplus
-    publickey:  nisplus
-    automount:  files nisplus
-    aliases:    files nisplus
-
-## nsswitch class
+#### nsswitch class
 
 This is the class by which you will manage the nsswitch.conf file. There
 is one paramter per standard database NSS supports. The class accepts both strings 
@@ -71,7 +51,7 @@ Available parameters are:
 
 For more information on NSS, please see the man pages. `man 5 nsswitch.conf`
 
-## Examples
+#### Examples
 
     # defaults only
     include nsswitch
@@ -86,3 +66,23 @@ For more information on NSS, please see the man pages. `man 5 nsswitch.conf`
       passwd => ['ldap','files'],
       hosts  => ['dns [!UNAVAIL=return]','files'],
     }
+#### Example nsswitch.conf with all defaults for RHEL systems
+
+    # This file is controlled by Puppet
+
+    passwd:     files
+    shadow:     files
+    group:      files
+    hosts:      files dns
+    bootparams: nisplus [NOTFOUND=return] files
+    ethers:     files
+    netmasks:   files
+    networks:   files
+    protocols:  files
+    rpc:        files
+    services:   files
+    netgroup:   nisplus
+    publickey:  nisplus
+    automount:  files nisplus
+    aliases:    files nisplus
+
