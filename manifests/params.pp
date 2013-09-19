@@ -61,6 +61,26 @@ class nsswitch::params {
                 $shadow_default     = ['compat']
                 $sudoers_default    = undef
     }
+    'SLES': {
+                $nsswitch_path = '/etc/nsswitch.conf'
+
+                $aliases_default    = ['files']
+                $automount_default  = ['files']
+                $bootparams_default = ['files']
+                $ethers_default     = ['files']
+                $group_default      = ['compat']
+                $hosts_default      = ['files','dns']
+                $netgroup_default   = ['files']
+                $netmasks_default   = ['files']
+                $networks_default   = ['files','dns']
+                $passwd_default     = ['compat']
+                $protocols_default  = ['files']
+                $publickey_default  = ['files']
+                $rpc_default        = ['files']
+                $services_default   = ['files']
+                $shadow_default     = undef
+                $sudoers_default    = undef
+    }
     default: { fail("${::operatingsystem} is not a supported operating system.") }
   }
 }
