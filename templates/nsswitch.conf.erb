@@ -1,51 +1,51 @@
 # This file is controlled by Puppet
 
-<% if @_passwd -%>
-passwd:     <%= [*@_passwd].join(" ") %>
+<% if @passwd -%>
+passwd:     <%= [*@passwd].join(" ") %>
 <% end -%>
-<% if @_shadow -%>
-shadow:     <%= [*@_shadow].join(" ") %>
+<% if @shadow -%>
+shadow:     <%= [*@shadow].join(" ") %>
 <% end -%>
-<% if @_group -%>
-group:      <%= [*@_group].join(" ") %>
+<% if @group -%>
+group:      <%= [*@group].join(" ") %>
 <% end -%>
-<% if @_sudoers -%>
-sudoers:    <%= [*@_sudoers].join(" ") %>
+<% if @sudoers -%>
+sudoers:    <%= [*@sudoers].join(" ") %>
 <% end -%>
-<% if @_hosts -%>
-hosts:      <%= [*@_hosts].join(" ") %>
+<% if @hosts -%>
+hosts:      <%= [*@hosts].join(" ") %>
 <% end -%>
-<% if @_bootparams -%>
-bootparams: <%= [*@_bootparams].join(" ") %>
+<% if @bootparams -%>
+bootparams: <%= [*@bootparams].join(" ") %>
 <% end -%>
-<% if @_ethers -%>
-ethers:     <%= [*@_ethers].join(" ") %>
+<% if @ethers -%>
+ethers:     <%= [*@ethers].join(" ") %>
 <% end -%>
-<% if @_netmasks -%>
-netmasks:   <%= [*@_netmasks].join(" ") %>
+<% if @netmasks -%>
+netmasks:   <%= [*@netmasks].join(" ") %>
 <% end -%>
-<% if @_networks -%>
-networks:   <%= [*@_networks].join(" ") %>
+<% if @networks -%>
+networks:   <%= [*@networks].join(" ") %>
 <% end -%>
-<% if @_protocols -%>
-protocols:  <%= [*@_protocols].join(" ") %>
+<% if @protocols -%>
+protocols:  <%= [*@protocols].join(" ") %>
 <% end -%>
-<% if @_rpc -%>
-rpc:        <%= [*@_rpc].join(" ") %>
+<% if @rpc -%>
+rpc:        <%= [*@rpc].join(" ") %>
 <% end -%>
-<% if @_services -%>
-services:   <%= [*@_services].join(" ") %>
+<% if @services -%>
+services:   <%= [*@services].join(" ") %>
 <% end -%>
-<% if @_netgroup -%>
-netgroup:   <%= [*@_netgroup].join(" ") %>
+<% if @netgroup -%>
+netgroup:   <%= [*@netgroup].join(" ") %>
 <% end -%>
-<% if @_publickey -%>
-publickey:  <%= [*@_publickey].join(" ") %>
+<% if @publickey -%>
+publickey:  <%= [*@publickey].join(" ") %>
 <% end -%>
-<% if @_automount -%>
-automount:  <%= [*@_automount].join(" ") %>
+<% if @automount -%>
+automount:  <%= [*@automount].join(" ") %>
 <% end -%>
-<% if @_aliases -%>
-aliases:    <%= [*@_aliases].join(" ") %>
+<% if @aliases -%>
+aliases:    <%= [*@aliases].join(" ") %>
 <% end -%>
 
