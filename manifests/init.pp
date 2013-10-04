@@ -1,23 +1,21 @@
 class nsswitch (
-  $aliases    = $nsswitch::params::aliases,
-  $automount  = $nsswitch::params::automount,
-  $bootparams = $nsswitch::params::bootparams,
-  $ethers     = $nsswitch::params::ethers,
-  $group      = $nsswitch::params::group,
-  $hosts      = $nsswitch::params::hosts,
-  $netgroup   = $nsswitch::params::netgroup,
-  $netmasks   = $nsswitch::params::netmasks,
-  $network    = $nsswitch::params::network,
-  $passwd     = $nsswitch::params::passwd,
-  $protocols  = $nsswitch::params::protocols,
-  $publickey  = $nsswitch::params::publickey,
-  $rpc        = $nsswitch::params::rpc,
-  $services   = $nsswitch::params::services,
-  $shadow     = $nsswitch::params::shadow,
-  $sudoers    = $nsswitch::params::sudoers,
+  $aliases    = $nsswitch::params::aliases_default,
+  $automount  = $nsswitch::params::automount_default,
+  $bootparams = $nsswitch::params::bootparams_default,
+  $ethers     = $nsswitch::params::ethers_default,
+  $group      = $nsswitch::params::group_default,
+  $hosts      = $nsswitch::params::hosts_default,
+  $netgroup   = $nsswitch::params::netgroup_default,
+  $netmasks   = $nsswitch::params::netmasks_default,
+  $network    = $nsswitch::params::network_default,
+  $passwd     = $nsswitch::params::passwd_default,
+  $protocols  = $nsswitch::params::protocols_default,
+  $publickey  = $nsswitch::params::publickey_default,
+  $rpc        = $nsswitch::params::rpc_default,
+  $services   = $nsswitch::params::services_default,
+  $shadow     = $nsswitch::params::shadow_default,
+  $sudoers    = $nsswitch::params::sudoers_default,
 ) inherits nsswitch::params {
-
-# We need to figure out if the use provided input or we use defaults.
 
   # Determine the value for Aliases
   if $aliases {
