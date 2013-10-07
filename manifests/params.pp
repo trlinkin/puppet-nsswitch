@@ -1,3 +1,25 @@
+# == Class: nsswitch::params
+#
+# Provides default values for the nsswitch module according to the
+# operatingsystem being used.
+#
+# === Parameters
+#
+# === Variables
+#
+# === Examples
+#
+# 
+#
+# === Authors
+#
+# Thomas Linkin <tom@puppetlabs.com>
+# Marcellus Siegburg <msiegbur@imn.htwk-leipzig.de>
+#
+# === Copyright
+#
+# Copyright 2013 Thomas Linkin, Marcellus Siegburg
+#
 class nsswitch::params {
 
   case $::operatingsystem {

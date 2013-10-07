@@ -19,6 +19,7 @@ This module should be capable of supporting the following systems:
 Testing has only confirmed functionality on the following:
   * Centos 6.x
   * Ubuntu 12.4
+  * Fedora 19
 
 ### Usage
 
