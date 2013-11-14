@@ -19,6 +19,7 @@ This module should be capable of supporting the following systems:
 Testing has only confirmed functionality on the following:
   * Centos 6.x
   * Ubuntu 12.4
+  * Fedora 19
 
 ### Usage
 
@@ -53,19 +54,22 @@ For more information on NSS, please see the man pages. `man 5 nsswitch.conf`
 
 #### Examples
 
-    # defaults only
-    include nsswitch
+```Puppet
+# defaults only
+include nsswitch
 
-    # setting a simple lookup
-    class { 'nsswitch':
-      publickey => 'nis',
-    }
+# setting a simple lookup
+class { 'nsswitch':
+  publickey => 'nis',
+}
 
-    # 'hosts' lookups contain a reaction statement for the 'dns' service
-    class { 'nsswitch':
-      passwd => ['ldap','files'],
-      hosts  => ['dns [!UNAVAIL=return]','files'],
-    }
+# 'hosts' lookups contain a reaction statement for the 'dns' service
+class { 'nsswitch':
+  passwd => ['ldap','files'],
+  hosts  => ['dns [!UNAVAIL=return]','files'],
+}
+```
+    
 #### Example nsswitch.conf with all defaults for RHEL systems
 
     # This file is controlled by Puppet
