@@ -118,7 +118,7 @@ class nsswitch (
   $hosts      = $nsswitch::params::hosts_default,
   $netgroup   = $nsswitch::params::netgroup_default,
   $netmasks   = $nsswitch::params::netmasks_default,
-  $network    = $nsswitch::params::network_default,
+  $networks   = $nsswitch::params::networks_default,
   $passwd     = $nsswitch::params::passwd_default,
   $protocols  = $nsswitch::params::protocols_default,
   $publickey  = $nsswitch::params::publickey_default,
