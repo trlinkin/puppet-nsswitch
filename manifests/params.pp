@@ -23,7 +23,7 @@
 class nsswitch::params {
 
   case $::operatingsystem {
-    /CentOS|RedHat|Amazon/: {
+    /CentOS|RedHat|Amazon|OracleLinux/: {
                 $nsswitch_path = '/etc/nsswitch.conf'
 
                 $aliases_default    = ['files','nisplus']
