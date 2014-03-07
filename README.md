@@ -15,9 +15,9 @@ This module should be capable of supporting the following systems:
  * Debian/Ubuntu
  * RHEL (Centos, RHEL6.x, Amazon)
  * Fedora
+ * Oracle Linux 6.x
 
 Testing has only confirmed functionality on the following:
-  * Centos 6.x
   * Ubuntu 12.4
   * Fedora 19
 
