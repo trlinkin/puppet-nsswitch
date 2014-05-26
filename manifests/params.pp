@@ -103,6 +103,24 @@ class nsswitch::params {
                 $shadow_default     = undef
                 $sudoers_default    = undef
     }
+    'Solaris': {
+                $nsswitch_path = '/etc/nsswitch.conf'
+
+                $passwd_default       = ['files','nisplus']
+                $group_default        = ['files','nisplus']
+                $hosts_default        = ['files','dns','nisplus']
+                $services_default     = ['nisplus','files']
+                $networks_default     = ['nisplus','files']
+                $protocols_default    = ['nisplus','files']
+                $rpc_default          = ['nisplus','files']
+                $ethers_default       = ['nisplus','files']
+                $netmasks_default     = ['files','nisplus']
+                $bootparams_default   = ['nisplus','files']
+                $publickey_default    = ['nisplus']
+                $netgroup_default     = ['nisplus']
+                $automount_default    = ['files','nisplus']
+                $aliases_default      = ['files','nisplus']
+    }
     default: { fail("${::operatingsystem} is not a supported operating system.") }
   }
 }
