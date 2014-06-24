@@ -111,7 +111,7 @@
 # Copyright 2013 Thomas Linkin, Marcellus Siegburg
 #
 class nsswitch (
-  $aliases  = $nsswitch::params::aliases_default,
+  $aliases    = $nsswitch::params::aliases_default,
   $automount  = $nsswitch::params::automount_default,
   $bootparams = $nsswitch::params::bootparams_default,
   $ethers     = $nsswitch::params::ethers_default,
