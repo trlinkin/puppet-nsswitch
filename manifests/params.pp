@@ -121,6 +121,26 @@ class nsswitch::params {
                 $automount_default    = ['files','nisplus']
                 $aliases_default      = ['files','nisplus']
     }
+    'Gentoo': {
+                $nsswitch_path = '/etc/nsswitch.conf'
+
+                $aliases_default    = ['files']
+                $automount_default  = ['files']
+                $bootparams_default = ['files']
+                $ethers_default     = ['db','files']
+                $group_default      = ['compat']
+                $hosts_default      = ['files','dns']
+                $netgroup_default   = ['files']
+                $netmasks_default   = ['files']
+                $networks_default   = ['files','dns']
+                $passwd_default     = ['compat']
+                $protocols_default  = ['db','files']
+                $publickey_default  = undef
+                $rpc_default        = ['db','files']
+                $services_default   = ['db','files']
+                $shadow_default     = ['compat']
+                $sudoers_default    = undef
+    }
     default: { fail("${::operatingsystem} is not a supported operating system.") }
   }
 }
