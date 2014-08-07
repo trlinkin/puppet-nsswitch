@@ -1,14 +1,17 @@
 # nsswitch.conf module for Puppet
 
 A way of expressing nsswitch.conf configurations declaratively. This
-should cover the 15 basic databases NSS supports. 
+should manage the standard 15 databases NSS supports, plus the `sudo` entry
+respected by sudo since the 1.7.0 release.
 
 ### Defaults
 
-Currenly this module has support for RedHat, CentOS, Amazon Linux, and
-Ubuntu. This module at its very basic will create an nsswitch.conf that
-uses defaults derived from the distrobution provided nsswitch.conf file.
-These defaults have been verified on the mentioned Distrobutions.
+Currently this module has support for EL based Linux distributions,
+Fedora, Ubuntu, and Gentoo. This module by default will create a basic
+nsswitch.conf that uses defaults derived from what the distribution uses in
+the nsswitch.conf file on fresh install. These defaults have been verified
+on the mentioned distributions by the kindness and diligence of
+contributors, of which I'm very grateful.
 
 ### Supported Systems
 This module should be capable of supporting the following systems:
@@ -16,6 +19,7 @@ This module should be capable of supporting the following systems:
  * RHEL (Centos, RHEL6.x, Amazon)
  * Fedora
  * Oracle Linux 6.x
+ * Gentoo
 
 Testing has only confirmed functionality on the following:
   * Ubuntu 12.4
@@ -48,6 +52,7 @@ Available parameters are:
 * publickey
 * rpc
 * services
+* sudo
 
 
 For more information on NSS, please see the man pages. `man 5 nsswitch.conf`
