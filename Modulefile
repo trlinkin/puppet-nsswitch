@@ -1,5 +1,5 @@
 name 'trlinkin-nsswitch'
-version '0.0.7'
+version '0.0.8'
 author 'Thomas Linkin'
 source 'https://github.com/trlinkin/puppet-nsswitch'
 summary 'Module for managing the nsswitch.'
