@@ -1,6 +1,6 @@
 {
   "name": "trlinkin-nsswitch",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "author": "Thomas Linkin",
   "license": "Licensed under (Apache 2.0)",
   "summary": "Module for managing nsswitch.conf",
