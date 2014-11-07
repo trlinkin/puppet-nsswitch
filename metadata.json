@@ -1,0 +1,66 @@
+{
+  "name": "trlinkin-nsswitch",
+  "version": "0.0.8",
+  "author": "Thomas Linkin",
+  "license": "Licensed under (Apache 2.0)",
+  "summary": "Module for managing nsswitch.conf",
+  "source": "https://github.com/trlinkin/puppet-nsswitch",
+  "project_page": "https://forge.puppetlabs.com/trlinkin/puppet-nsswitch",
+  "issues_url": "https://github.com/trlinkin/puppet-nsswitch/issues",
+  "tags": [
+    "Linux",
+    "nsswitch",
+    "authentication",
+    "EL",
+    "solaris"
+  ],
+  "operatingsystem_support": [
+    {
+    "operatingsystem": "RedHat",
+    "operatingsystemrelease": [
+      "5.0",
+      "6.0"
+    ]
+  },
+  {
+    "operatingsystem": "CentOS"
+  },
+  {
+    "operatingsystem": "OracleLinux"
+  },
+  {
+    "operatingsystem": "Amazon"
+  },
+  {
+    "operatingsystem": "Scientific"
+  },
+  {
+    "operatingsystem": "Ubuntu",
+    "operatingsystemrelease": [
+      "12.04",
+      "10.04"
+    ]
+  },
+  {
+    "operatingsystem": "Debian"
+  },
+  {
+    "operatingsystem": "SLES"
+  },
+  {
+    "operatingsystem": "Solaris"
+  },
+  {
+    "operatingsystem": "Gentoo"
+  }
+  ],
+  "dependencies": [
+    {
+    "name": "puppetlabs/stdlib"
+  },
+  {
+    "name": "trlinkin/validate_multi",
+    "version_requirement": ">= 0.1.0"
+  }
+  ]
+}
