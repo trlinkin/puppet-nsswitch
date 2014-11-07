@@ -1,4 +1,5 @@
 # nsswitch.conf module for Puppet
+[![Build Status](https://travis-ci.org/trlinkin/puppet-nsswitch.svg?branch=master)](https://travis-ci.org/trlinkin/puppet-nsswitch)
 
 A way of expressing nsswitch.conf configurations declaratively. This
 should manage the standard 15 databases NSS supports, plus the `sudo` entry
