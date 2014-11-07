@@ -24,8 +24,6 @@ class nsswitch::params {
 
   case $::operatingsystem {
     /CentOS|RedHat|Amazon|OracleLinux|Scientific/: {
-                $nsswitch_path = '/etc/nsswitch.conf'
-
                 $aliases_default    = ['files','nisplus']
                 $automount_default  = ['files','nisplus']
                 $bootparams_default = ['nisplus [NOTFOUND=return]','files']
@@ -44,8 +42,6 @@ class nsswitch::params {
                 $sudoers_default    = undef
     }
     'Fedora': {
-                $nsswitch_path = '/etc/nsswitch.conf'
-
                 $aliases_default    = ['files','nisplus']
                 $automount_default  = ['files','nisplus']
                 $bootparams_default = ['nisplus [NOTFOUND=return]','files']
@@ -64,8 +60,6 @@ class nsswitch::params {
                 $sudoers_default    = undef
     }
     /Ubuntu|Debian/: {
-                $nsswitch_path = '/etc/nsswitch.conf'
-
                 $aliases_default    = undef
                 $automount_default  = undef
                 $bootparams_default = undef
@@ -84,8 +78,6 @@ class nsswitch::params {
                 $sudoers_default    = undef
     }
     'SLES': {
-                $nsswitch_path = '/etc/nsswitch.conf'
-
                 $aliases_default    = ['files']
                 $automount_default  = ['files']
                 $bootparams_default = ['files']
@@ -104,8 +96,6 @@ class nsswitch::params {
                 $sudoers_default    = undef
     }
     'Solaris': {
-                $nsswitch_path = '/etc/nsswitch.conf'
-
                 $passwd_default       = ['files','nisplus']
                 $group_default        = ['files','nisplus']
                 $hosts_default        = ['files','dns','nisplus']
@@ -122,8 +112,6 @@ class nsswitch::params {
                 $aliases_default      = ['files','nisplus']
     }
     'Gentoo': {
-                $nsswitch_path = '/etc/nsswitch.conf'
-
                 $aliases_default    = ['files']
                 $automount_default  = ['files']
                 $bootparams_default = ['files']

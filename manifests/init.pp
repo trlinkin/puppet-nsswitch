@@ -194,7 +194,9 @@ class nsswitch (
     validate_multi($sudoers,'string','array')
   }
 
-  file { $nsswitch::params::nsswitch_path:
+  file { 'nsswitch.conf':
+    ensure  => file,
+    path    => '/etc/nsswitch.conf',
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
