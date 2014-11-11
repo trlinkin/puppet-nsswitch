@@ -111,22 +111,24 @@
 # Copyright 2013 Thomas Linkin, Marcellus Siegburg
 #
 class nsswitch (
-  $aliases    = $nsswitch::params::aliases_default,
-  $automount  = $nsswitch::params::automount_default,
-  $bootparams = $nsswitch::params::bootparams_default,
-  $ethers     = $nsswitch::params::ethers_default,
-  $group      = $nsswitch::params::group_default,
-  $hosts      = $nsswitch::params::hosts_default,
-  $netgroup   = $nsswitch::params::netgroup_default,
-  $netmasks   = $nsswitch::params::netmasks_default,
-  $networks   = $nsswitch::params::networks_default,
-  $passwd     = $nsswitch::params::passwd_default,
-  $protocols  = $nsswitch::params::protocols_default,
-  $publickey  = $nsswitch::params::publickey_default,
-  $rpc        = $nsswitch::params::rpc_default,
-  $services   = $nsswitch::params::services_default,
-  $shadow     = $nsswitch::params::shadow_default,
-  $sudoers    = $nsswitch::params::sudoers_default,
+  $aliases       = $nsswitch::params::aliases_default,
+  $automount     = $nsswitch::params::automount_default,
+  $bootparams    = $nsswitch::params::bootparams_default,
+  $ethers        = $nsswitch::params::ethers_default,
+  $group         = $nsswitch::params::group_default,
+  $hosts         = $nsswitch::params::hosts_default,
+  $netgroup      = $nsswitch::params::netgroup_default,
+  $netmasks      = $nsswitch::params::netmasks_default,
+  $networks      = $nsswitch::params::networks_default,
+  $passwd        = $nsswitch::params::passwd_default,
+  $passwd_compat = $nsswitch::params::passwd_compat_default,
+  $protocols     = $nsswitch::params::protocols_default,
+  $publickey     = $nsswitch::params::publickey_default,
+  $rpc           = $nsswitch::params::rpc_default,
+  $services      = $nsswitch::params::services_default,
+  $shadow        = $nsswitch::params::shadow_default,
+  $shadow_compat = $nsswitch::params::shadow_compat_default,
+  $sudoers       = $nsswitch::params::sudoers_default,
 ) inherits nsswitch::params {
 
   # Determine the value for Aliases
@@ -169,6 +171,10 @@ class nsswitch (
   if $passwd  {
     validate_multi($passwd,'string','array')
   }
+  # Determine the value for passwd_compat
+  if $passwd_compat {
+   validate_multi($passwd_compat,'string','array')
+  }
   # Determine the value for Protocols
   if $protocols {
     validate_multi($protocols,'string','array')
@@ -188,6 +194,10 @@ class nsswitch (
   # Determine the value for Shadow
   if $shadow {
     validate_multi($shadow,'string','array')
+  }
+  # Determine the value for shadow_compat
+  if $shadow_compat {
+    validate_multi($shadow_compat,'string','array')
   }
   # Determine the value for Sudoers
   if $sudoers {
