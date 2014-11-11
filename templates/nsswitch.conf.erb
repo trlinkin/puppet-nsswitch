@@ -1,7 +1,12 @@
 # This file is controlled by Puppet
-
+<% if @passwd_compat -%>
+passwd_compat:     <%= [*@passwd_compat].join(" ") %>
+<% end -%>
 <% if @passwd -%>
 passwd:     <%= [*@passwd].join(" ") %>
+<% end -%>
+<% if @shadow_compat -%>
+shadow_compat:     <%= [*@shadow_compat].join(" ") %>
 <% end -%>
 <% if @shadow -%>
 shadow:     <%= [*@shadow].join(" ") %>
@@ -48,4 +53,3 @@ automount:  <%= [*@automount].join(" ") %>
 <% if @aliases -%>
 aliases:    <%= [*@aliases].join(" ") %>
 <% end -%>
-
