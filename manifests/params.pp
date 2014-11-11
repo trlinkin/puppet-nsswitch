@@ -24,22 +24,24 @@ class nsswitch::params {
 
   case $::operatingsystem {
     /CentOS|RedHat|Amazon|OracleLinux|Scientific/: {
-                $aliases_default    = ['files','nisplus']
-                $automount_default  = ['files','nisplus']
-                $bootparams_default = ['nisplus [NOTFOUND=return]','files']
-                $ethers_default     = ['files']
-                $group_default      = ['files']
-                $hosts_default      = ['files','dns']
-                $netgroup_default   = ['nisplus']
-                $netmasks_default   = ['files']
-                $networks_default   = ['files']
-                $passwd_default     = ['files']
-                $protocols_default  = ['files']
-                $publickey_default  = ['nisplus']
-                $rpc_default        = ['files']
-                $services_default   = ['files']
-                $shadow_default     = ['files']
-                $sudoers_default    = undef
+                $aliases_default       = ['files','nisplus']
+                $automount_default     = ['files','nisplus']
+                $bootparams_default    = ['nisplus [NOTFOUND=return]','files']
+                $ethers_default        = ['files']
+                $group_default         = ['files']
+                $hosts_default         = ['files','dns']
+                $netgroup_default      = ['nisplus']
+                $netmasks_default      = ['files']
+                $networks_default      = ['files']
+                $passwd_default        = ['files']
+                $passwd_compat_default = undef
+                $protocols_default     = ['files']
+                $publickey_default     = ['nisplus']
+                $rpc_default           = ['files']
+                $services_default      = ['files']
+                $shadow_default        = ['files']
+                $shadow_compat_default = undef
+                $sudoers_default       = undef
     }
     'Fedora': {
                 $aliases_default    = ['files','nisplus']
