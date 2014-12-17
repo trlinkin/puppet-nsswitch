@@ -2,16 +2,16 @@
   "name": "trlinkin-nsswitch",
   "version": "0.1.0",
   "author": "Thomas Linkin",
-  "license": "Licensed under (Apache 2.0)",
+  "license": "Apache-2.0",
   "summary": "Module for managing nsswitch.conf",
   "source": "https://github.com/trlinkin/puppet-nsswitch",
   "project_page": "https://github.com/trlinkin/puppet-nsswitch",
   "issues_url": "https://github.com/trlinkin/puppet-nsswitch/issues",
   "tags": [
-    "Linux",
+    "linux",
     "nsswitch",
     "authentication",
-    "EL",
+    "el",
     "solaris"
   ],
   "operatingsystem_support": [
@@ -56,7 +56,8 @@
   ],
   "dependencies": [
     {
-    "name": "puppetlabs/stdlib"
+    "name": "puppetlabs/stdlib",
+    "version_requirement": ">= 1.0.0"
   },
   {
     "name": "trlinkin/validate_multi",
