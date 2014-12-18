@@ -96,6 +96,20 @@ class { 'nsswitch':
     automount:  files nisplus
     aliases:    files nisplus
 
+### Changelog
+
+* Bump version to 1.0.0
+* Adding license file
+* Further clean up metadata.json
+* Add travis-ci badge
+* Correct wrong link in metadata.json
+* Add .travis.yml for automated Travis-CI testing
+* Add .rspec file for testing purposes
+* Bump version to 0.1.0 for release
+* Convert to metadata.json
+* Add initial components of automated testing
+* Remove useless filename selection
+
 #### License
    Copyright 2013 Thomas Linkin <tom@puppetlabs.com>
 
