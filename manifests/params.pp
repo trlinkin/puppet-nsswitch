@@ -47,7 +47,9 @@ class nsswitch::params {
                 $bootparams_default = ['nisplus [NOTFOUND=return]','files']
                 $ethers_default     = ['files']
                 $group_default      = ['files']
-                $hosts_default      = ['files','mdns4_minimal [NOTFOUND=return]','dns']
+                $hosts_default      = ['files',
+                                      'mdns4_minimal [NOTFOUND=return]',
+                                      'dns']
                 $netgroup_default   = ['nisplus']
                 $netmasks_default   = ['files']
                 $networks_default   = ['files']
@@ -129,6 +131,8 @@ class nsswitch::params {
                 $shadow_default     = ['compat']
                 $sudoers_default    = undef
     }
-    default: { fail("${::operatingsystem} is not a supported operating system.") }
+    default: {
+      fail("${::operatingsystem} is not a supported operating system.")
+    }
   }
 }
