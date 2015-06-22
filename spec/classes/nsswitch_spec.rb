@@ -12,9 +12,7 @@ describe 'nsswitch', :type => :class do
   context 'when used on an unsupported Operatin System' do
     let(:facts) { {:operatingsystem => 'Windows' } }
     it do
-      expect {
-        should compile
-      }.to raise_error(Puppet::Error, /is not a supported operating system\./)
+      expect raise_error(Puppet::Error, /is not a supported operating system\./)
     end
   end
 end
