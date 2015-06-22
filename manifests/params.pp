@@ -23,7 +23,7 @@
 class nsswitch::params {
 
   case $::operatingsystem {
-    /CentOS|RedHat|Amazon|OracleLinux|Scientific/: {
+    /CentOS|RedHat|Amazon|OEL|OracleLinux|Scientific/: {
                 $aliases_default    = ['files','nisplus']
                 $automount_default  = ['files','nisplus']
                 $bootparams_default = ['nisplus [NOTFOUND=return]','files']
