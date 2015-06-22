@@ -10,7 +10,7 @@ describe 'nsswitch', :type => :class do
   end
 
   context 'when used on an unsupported Operatin System' do
-    let(:facts) { {:operatinsystem => 'Windows' } }
+    let(:facts) { {:operatingsystem => 'Windows' } }
     it do
       expect {
         should compile
