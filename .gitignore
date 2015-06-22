@@ -22,6 +22,8 @@ vendor/bundle/
 ## Puppet Module Tool
 pkg/
 
-
 ## Testing Artifacts
 spec/fixtures/
+
+## Gemfile.lock
+Gemfile.lock
