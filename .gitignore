@@ -14,9 +14,6 @@ tmtags
 *.swp
 tags
 
-## Gemfile
-Gemfile.lock
-
 ## Bundler
 .bundle/
 .vendor/
