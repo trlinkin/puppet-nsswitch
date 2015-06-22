@@ -4,8 +4,8 @@ gem 'rake',                    :require => false
 gem 'rspec-puppet',            :require => false
 gem 'puppetlabs_spec_helper',  :require => false
 gem 'puppet-lint',             :require => false
-gem 'rspec',                   '<3.0.0'
-gem 'rspec-expectations',      '<3.0.0'
+gem 'rspec',                   :require => false
+gem 'rspec-expectations',      :require => false
 
 if facterversion = ENV['FACTER_GEM_VERSION']
   gem 'facter', facterversion, :require => false
