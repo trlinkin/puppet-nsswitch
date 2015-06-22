@@ -8,7 +8,7 @@ respected by sudo since the 1.7.0 release.
 ### Defaults
 
 Currently this module has support for EL based Linux distributions,
-Fedora, Ubuntu, and Gentoo. This module by default will create a basic
+Fedora, Debian/Ubuntu, and Gentoo. This module by default will create a basic
 nsswitch.conf that uses defaults derived from what the distribution uses in
 the nsswitch.conf file on fresh install. These defaults have been verified
 on the mentioned distributions by the kindness and diligence of
@@ -19,12 +19,14 @@ This module should be capable of supporting the following systems:
  * Debian/Ubuntu
  * RHEL (Centos, RHEL6.x, Amazon)
  * Fedora
- * Oracle Linux 6.x
+ * Oracle Linux 5.x, 6.x
  * Gentoo
 
 Testing has only confirmed functionality on the following:
   * Ubuntu 12.4
   * Fedora 19
+  * Centos 6/7
+  * RHEL 6/7
 
 ### Usage
 
@@ -75,7 +77,7 @@ class { 'nsswitch':
   hosts  => ['dns [!UNAVAIL=return]','files'],
 }
 ```
-    
+
 #### Example nsswitch.conf with all defaults for RHEL systems
 
     # This file is controlled by Puppet
