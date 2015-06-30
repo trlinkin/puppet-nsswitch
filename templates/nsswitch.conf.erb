@@ -51,4 +51,7 @@ automount:  <%= [*@automount].join(" ") %>
 <% if @aliases -%>
 aliases:    <%= [*@aliases].join(" ") %>
 <% end -%>
+<% if @shells -%>
+shells:    <%= [*@shells].join(" ") %>
+<% end -%>
 
