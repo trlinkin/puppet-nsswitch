@@ -5,6 +5,7 @@ gem 'rspec-puppet', '2.2.0',   :require => false
 gem 'rake',                    :require => false
 gem 'puppetlabs_spec_helper',  :require => false
 gem 'puppet-lint',             :require => false
+gem 'metadata-json-lint',      :require => false
 
 if facterversion = ENV['FACTER_GEM_VERSION']
   gem 'facter', facterversion, :require => false

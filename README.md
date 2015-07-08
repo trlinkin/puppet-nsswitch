@@ -100,6 +100,19 @@ class { 'nsswitch':
 
 ### Changelog
 
+* Update Changelog and bump version to 1.1.0
+* Extend Travis-CI testing
+* Updates to the README.md
+* Fixup the travis-ci configuration
+* Removing Gemfile.lock - I was wrong
+* Update spec tests to use Rspec 3.x syntax
+* Refactor unit tests for changes in Rspec/Rspec-Puppet
+* Add changes to Gemfile and add a Gemfile.lock
+* Remove Gemfile.lock from the .gitignore
+* Fix fact name in spec tests
+* Add fixtures to .gitignore
+* add OEL supprt
+* making changes to pass lint
 * Bump version to 1.0.0
 * Adding license file
 * Further clean up metadata.json
