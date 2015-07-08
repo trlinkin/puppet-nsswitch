@@ -15,4 +15,58 @@ describe 'nsswitch', :type => :class do
       is_expected.to raise_error(Puppet::Error, /is not a supported operating system\./)
     end
   end
+
+  context "when passed parameters" do
+    let(:facts) { {:operatingsystem => 'CentOS' } }
+
+    context "every parameter will accept type of STRING" do
+      let(:params) {
+        {
+          :aliases    => 'foo',
+          :automount  => 'foo',
+          :bootparams => 'foo',
+          :ethers     => 'foo',
+          :group      => 'foo',
+          :hosts      => 'foo',
+          :netgroup   => 'foo',
+          :netmasks   => 'foo',
+          :networks   => 'foo',
+          :passwd     => 'foo',
+          :protocols  => 'foo',
+          :publickey  => 'foo',
+          :rpc        => 'foo',
+          :services   => 'foo',
+          :shadow     => 'foo',
+          :sudoers    => 'foo',
+        }
+      }
+
+      it { is_expected.to compile }
+    end
+
+    context "every parameter will accept type of ARRAY" do
+      let(:params) {
+        {
+          :aliases    => ['foo'],
+          :automount  => ['foo'],
+          :bootparams => ['foo'],
+          :ethers     => ['foo'],
+          :group      => ['foo'],
+          :hosts      => ['foo'],
+          :netgroup   => ['foo'],
+          :netmasks   => ['foo'],
+          :networks   => ['foo'],
+          :passwd     => ['foo'],
+          :protocols  => ['foo'],
+          :publickey  => ['foo'],
+          :rpc        => ['foo'],
+          :services   => ['foo'],
+          :shadow     => ['foo'],
+          :sudoers    => ['foo'],
+        }
+      }
+
+      it { is_expected.to compile }
+    end
+  end
 end
