@@ -33,6 +33,11 @@
 #   Groups of users, used by getgrent() and related functions.
 #   *Optional* (defaults to $nsswitch::params::group_default)
 #
+# [*gshadow*]
+#
+#   Shadow groups, used by getspnam() and related functions.
+#   *Optional* (defaults to $nsswitch::params::gshadow_default)
+#
 # [*hosts*]
 #
 #   Host names and numbers, used by gethostbyname() and related functions.
@@ -116,6 +121,7 @@ class nsswitch (
   $bootparams = $nsswitch::params::bootparams_default,
   $ethers     = $nsswitch::params::ethers_default,
   $group      = $nsswitch::params::group_default,
+  $gshadow    = $nsswitch::params::gshadow_default,
   $hosts      = $nsswitch::params::hosts_default,
   $netgroup   = $nsswitch::params::netgroup_default,
   $netmasks   = $nsswitch::params::netmasks_default,
@@ -148,6 +154,10 @@ class nsswitch (
   # Determine the value for Groups
   if $group {
     validate_multi($group,'string','array')
+  }
+  # Determine the value for Shadow
+  if $gshadow {
+    validate_multi($gshadow,'string','array')
   }
   # Determine the value for Hosts
   if $hosts {
