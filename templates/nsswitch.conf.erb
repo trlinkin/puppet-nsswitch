@@ -6,6 +6,9 @@ passwd:     <%= [*@passwd].join(" ") %>
 <% if @shadow -%>
 shadow:     <%= [*@shadow].join(" ") %>
 <% end -%>
+<% if @gshadow -%>
+gshadow:    <%= [*@gshadow].join(" ") %>
+<% end -%>
 <% if @group -%>
 group:      <%= [*@group].join(" ") %>
 <% end -%>

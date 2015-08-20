@@ -29,6 +29,7 @@ class nsswitch::params {
                 $bootparams_default = ['nisplus [NOTFOUND=return]','files']
                 $ethers_default     = ['files']
                 $group_default      = ['files']
+                $gshadow_default    = undef
                 $hosts_default      = ['files','dns']
                 $netgroup_default   = ['nisplus']
                 $netmasks_default   = ['files']
@@ -47,6 +48,7 @@ class nsswitch::params {
                 $bootparams_default = ['nisplus [NOTFOUND=return]','files']
                 $ethers_default     = ['files']
                 $group_default      = ['files']
+                $gshadow_default    = undef
                 $hosts_default      = ['files',
                                       'mdns4_minimal [NOTFOUND=return]',
                                       'dns']
@@ -67,6 +69,7 @@ class nsswitch::params {
                 $bootparams_default = undef
                 $ethers_default     = ['db','files']
                 $group_default      = ['compat']
+                $gshadow_default    = ['files']
                 $hosts_default      = ['files','dns']
                 $netgroup_default   = ['nis']
                 $netmasks_default   = undef
@@ -85,6 +88,7 @@ class nsswitch::params {
                 $bootparams_default = ['files']
                 $ethers_default     = ['files']
                 $group_default      = ['compat']
+                $gshadow_default    = undef
                 $hosts_default      = ['files','dns']
                 $netgroup_default   = ['files']
                 $netmasks_default   = ['files']
@@ -100,6 +104,7 @@ class nsswitch::params {
     'Solaris': {
                 $passwd_default       = ['files','nisplus']
                 $group_default        = ['files','nisplus']
+                $gshadow_default    = undef
                 $hosts_default        = ['files','dns','nisplus']
                 $services_default     = ['nisplus','files']
                 $networks_default     = ['nisplus','files']
@@ -119,6 +124,7 @@ class nsswitch::params {
                 $bootparams_default = ['files']
                 $ethers_default     = ['db','files']
                 $group_default      = ['compat']
+                $gshadow_default    = undef
                 $hosts_default      = ['files','dns']
                 $netgroup_default   = ['files']
                 $netmasks_default   = ['files']
