@@ -35,6 +35,9 @@
     "operatingsystem": "Scientific"
   },
   {
+    "operatingsystem": "CloudLinux"
+  },
+  {
     "operatingsystem": "Ubuntu",
     "operatingsystemrelease": [
       "12.04",
