@@ -10,9 +10,7 @@
   "tags": [
     "linux",
     "nsswitch",
-    "authentication",
-    "el",
-    "solaris"
+    "authentication"
   ],
   "operatingsystem_support": [
     {
