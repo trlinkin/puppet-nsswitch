@@ -63,7 +63,7 @@ class nsswitch::params {
                 $shadow_default     = ['files']
                 $sudoers_default    = undef
     }
-    /Ubuntu|Debian/: {
+    /Ubuntu|Debian|CloudLinux/: {
                 $aliases_default    = undef
                 $automount_default  = undef
                 $bootparams_default = undef
