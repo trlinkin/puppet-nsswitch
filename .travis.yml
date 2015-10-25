@@ -2,7 +2,7 @@ language: ruby
 script:
   - "bundle exec rake syntax"
   - "bundle exec rake lint"
-  - "bundler exec rake metadata"
+  - "bundle exec rake metadata"
   - "bundle exec rake spec SPEC_OPTS='--color --format documentation'"
 rvm:
  - 1.9.3-p484
