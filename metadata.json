@@ -17,40 +17,41 @@
     "operatingsystem": "RedHat",
     "operatingsystemrelease": [
       "5.0",
-      "6.0"
-    ]
-  },
-  {
-    "operatingsystem": "CentOS"
-  },
-  {
-    "operatingsystem": "OracleLinux"
-  },
-  {
-    "operatingsystem": "Amazon"
-  },
-  {
-    "operatingsystem": "Scientific"
-  },
-  {
-    "operatingsystem": "Ubuntu",
-    "operatingsystemrelease": [
-      "12.04",
-      "10.04"
-    ]
-  },
-  {
-    "operatingsystem": "Debian"
-  },
-  {
-    "operatingsystem": "SLES"
-  },
-  {
-    "operatingsystem": "Solaris"
-  },
-  {
-    "operatingsystem": "Gentoo"
-  }
+      "6.0",
+      "7.0"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS"
+    },
+    {
+      "operatingsystem": "OracleLinux"
+    },
+    {
+      "operatingsystem": "Amazon"
+    },
+    {
+      "operatingsystem": "Scientific"
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "10.04"
+      ]
+    },
+    {
+      "operatingsystem": "Debian"
+    },
+    {
+      "operatingsystem": "SLES"
+    },
+    {
+      "operatingsystem": "Solaris"
+    },
+    {
+      "operatingsystem": "Gentoo"
+    }
   ],
   "requirements": [
     {
