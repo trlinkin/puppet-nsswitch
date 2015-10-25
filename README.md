@@ -100,6 +100,16 @@ class { 'nsswitch':
 
 ### Changelog
 
+* Change quoting of string in `params.pp`
+* Correct `.travis.yml` tests
+* Add unit tests for different EL versions
+* Cleanup metadata tabbing and add EL 7 version
+* Add Puppet/PE requirements to metadata.json
+* Add explicit support for EL 7
+* Change tabbing in params.pp
+* Remove undesirable tags from metadata
+* Merge pull request #15 from togge/master
+* added support for gshadow
 * Update Changelog and bump version to 1.1.0
 * Extend Travis-CI testing
 * Updates to the README.md
