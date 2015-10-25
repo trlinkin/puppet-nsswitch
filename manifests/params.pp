@@ -24,22 +24,34 @@ class nsswitch::params {
 
   case $::operatingsystem {
     /CentOS|RedHat|Amazon|OEL|OracleLinux|Scientific/: {
+      if $::operatingsystemmajrelease == "7" {
+        $passwd_default     = ['files','sss']
+        $shadow_default     = ['files','sss']
+        $group_default      = ['files','sss']
+        $automount_default  = ['files']
+
+        $services_default   = ['files','sss']
+        $netgroup_default   = ['files','sss']
+      }else{
+        $passwd_default     = ['files']
+        $shadow_default     = ['files']
+        $group_default      = ['files']
+        $automount_default  = ['files','nisplus']
+
+        $services_default   = ['files']
+        $netgroup_default   = ['nisplus']
+      }
+
       $aliases_default    = ['files','nisplus']
-      $automount_default  = ['files','nisplus']
       $bootparams_default = ['nisplus [NOTFOUND=return]','files']
       $ethers_default     = ['files']
-      $group_default      = ['files']
       $gshadow_default    = undef
       $hosts_default      = ['files','dns']
-      $netgroup_default   = ['nisplus']
       $netmasks_default   = ['files']
       $networks_default   = ['files']
-      $passwd_default     = ['files']
       $protocols_default  = ['files']
       $publickey_default  = ['nisplus']
       $rpc_default        = ['files']
-      $services_default   = ['files']
-      $shadow_default     = ['files']
       $sudoers_default    = undef
     }
     'Fedora': {
