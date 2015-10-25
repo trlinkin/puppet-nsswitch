@@ -9,6 +9,26 @@ describe 'nsswitch', :type => :class do
     end
   end
 
+  context 'when used with default parameters on Enterprise Linux' do
+    let(:facts) { {:operatingsystem => 'RedHat'} }
+
+    context 'version 6' do
+      let(:facts) do
+        super().merge({:operatingsystemimajrelease => '6'})
+      end
+      it { is_expected.to compile.with_all_deps }
+      it { is_expected.to have_resource_count(1) }
+    end
+
+    context 'version 7' do
+      let(:facts) do
+        super().merge({:operatingsystemmajrelease => '7'})
+      end
+      it { is_expected.to compile.with_all_deps }
+      it { is_expected.to have_resource_count(1) }
+    end
+  end
+
   context 'when used on an unsupported Operatin System' do
     let(:facts) { {:operatingsystem => 'Windows' } }
     it do
