@@ -70,14 +70,5 @@
       "version_requirement": ">= 3.0.0 < 4.0.0"
     }
   ],
-  "dependencies": [
-    {
-    "name": "puppetlabs/stdlib",
-    "version_requirement": ">= 1.0.0"
-  },
-  {
-    "name": "trlinkin/validate_multi",
-    "version_requirement": ">= 0.1.0"
-  }
-  ]
+  "dependencies": []
 }
