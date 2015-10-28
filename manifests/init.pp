@@ -139,6 +139,6 @@ class nsswitch (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template('nsswitch/nsswitch.conf.erb'),
+    content => epp('nsswitch/nsswitch.conf.epp'),
   }
 }
