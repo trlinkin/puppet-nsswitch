@@ -28,6 +28,9 @@
       "operatingsystem": "OracleLinux"
     },
     {
+      "operatingsystem": "CloudLinux"
+    },
+    {
       "operatingsystem": "Amazon"
     },
     {
