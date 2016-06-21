@@ -22,7 +22,7 @@
 #
 class nsswitch::params {
 
-  case $::operatingsystem {
+  case $facts['operatingsystem'] {
     /CentOS|RedHat|Amazon|OEL|OracleLinux|Scientific|CloudLinux/: {
       if $::operatingsystemmajrelease == '7' {
         $passwd_default     = ['files','sss']
@@ -150,7 +150,7 @@ class nsswitch::params {
       $sudoers_default    = undef
     }
     default: {
-      fail("${::operatingsystem} is not a supported operating system.")
+      fail("${facts['operatingsystem']} is not a supported operating system.")
     }
   }
 }
