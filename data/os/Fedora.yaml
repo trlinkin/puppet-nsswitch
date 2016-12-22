@@ -1,0 +1,18 @@
+---
+nsswitch::aliases    : ['files','nisplus']
+nsswitch::automount  : ['files','nisplus']
+nsswitch::bootparams : ['nisplus [NOTFOUND=return]','files']
+nsswitch::ethers     : ['files']
+nsswitch::group      : ['files']
+nsswitch::gshadow    : null
+nsswitch::hosts      : ['files','mdns4_minimal [NOTFOUND=return]','dns']
+nsswitch::netgroup   : ['nisplus']
+nsswitch::netmasks   : ['files']
+nsswitch::networks   : ['files']
+nsswitch::passwd     : ['files']
+nsswitch::protocols  : ['files']
+nsswitch::publickey  : ['nisplus']
+nsswitch::rpc        : ['files']
+nsswitch::services   : ['files']
+nsswitch::shadow     : ['files']
+nsswitch::sudoers    : null
