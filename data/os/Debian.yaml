@@ -1,0 +1,18 @@
+---
+nsswitch::aliases    : null
+nsswitch::automount  : null
+nsswitch::bootparams : null
+nsswitch::ethers     : ['db','files']
+nsswitch::group      : ['compat']
+nsswitch::gshadow    : ['files']
+nsswitch::hosts      : ['files','dns']
+nsswitch::netgroup   : ['nis']
+nsswitch::netmasks   : null
+nsswitch::networks   : ['files']
+nsswitch::passwd     : ['compat']
+nsswitch::protocols  : ['db','files']
+nsswitch::publickey  : null
+nsswitch::rpc        : ['db','files']
+nsswitch::services   : ['db','files']
+nsswitch::shadow     : ['compat']
+nsswitch::sudoers    : null

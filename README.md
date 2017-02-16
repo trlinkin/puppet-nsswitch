@@ -33,7 +33,7 @@ Testing has only confirmed functionality on the following:
 #### nsswitch class
 
 This is the class by which you will manage the nsswitch.conf file. There
-is one paramter per standard database NSS supports. The class accepts both strings 
+is one paramter per standard database NSS supports. The class accepts both strings
 and arrays as paramters. The benefit being, you could possibly merge an array
 of options with hiera. When using an array, each element should be the
 lookup service followed by the reaction statement.
@@ -100,6 +100,7 @@ class { 'nsswitch':
 
 ### Changelog
 
+* Migrate to Puppet 4 with data in modules and strong typing
 * Change quoting of string in `params.pp`
 * Correct `.travis.yml` tests
 * Add unit tests for different EL versions

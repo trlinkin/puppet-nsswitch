@@ -1,0 +1,12 @@
+---
+nsswitch::aliases    : ['files','nisplus']
+nsswitch::bootparams : ['nisplus [NOTFOUND=return]','files']
+nsswitch::ethers     : ['files']
+nsswitch::gshadow    : null
+nsswitch::hosts      : ['files','dns']
+nsswitch::netmasks   : ['files']
+nsswitch::networks   : ['files']
+nsswitch::protocols  : ['files']
+nsswitch::publickey  : ['nisplus']
+nsswitch::rpc        : ['files']
+nsswitch::sudoers    : null

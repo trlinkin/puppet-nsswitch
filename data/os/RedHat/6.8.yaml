@@ -1,0 +1,8 @@
+---
+# 6.8 using sssd and 7
+nsswitch::passwd     : ['files','sss']
+nsswitch::shadow     : ['files','sss']
+nsswitch::group      : ['files','sss']
+nsswitch::automount  : ['files']
+nsswitch::services   : ['files','sss']
+nsswitch::netgroup   : ['files','sss']
