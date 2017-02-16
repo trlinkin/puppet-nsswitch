@@ -80,14 +80,6 @@
   ],
   "requirements": [
     {
-      "name": "pe",
-      "version_requirement": ">= 2016.2.0"
-    },
-    {
-      "name": "facter",
-      "version_requirement": ">= 1.7.0"
-    },
-    {
       "name": "puppet",
       "version_requirement": ">= 4.4.0"
     }
@@ -95,7 +87,7 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 4.8.0"
+      "version_requirement": ">= 4.12.0"
     }
   ]
 }
