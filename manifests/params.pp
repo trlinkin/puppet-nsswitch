@@ -45,14 +45,14 @@ class nsswitch::params {
       $aliases_default    = ['files','nisplus']
       $bootparams_default = ['nisplus [NOTFOUND=return]','files']
       $ethers_default     = ['files']
-      $gshadow_default    = undef
+      $gshadow_default    = []
       $hosts_default      = ['files','dns']
       $netmasks_default   = ['files']
       $networks_default   = ['files']
       $protocols_default  = ['files']
       $publickey_default  = ['nisplus']
       $rpc_default        = ['files']
-      $sudoers_default    = undef
+      $sudoers_default    = []
     }
     'Fedora': {
       $aliases_default    = ['files','nisplus']
@@ -60,7 +60,7 @@ class nsswitch::params {
       $bootparams_default = ['nisplus [NOTFOUND=return]','files']
       $ethers_default     = ['files']
       $group_default      = ['files']
-      $gshadow_default    = undef
+      $gshadow_default    = []
       $hosts_default      = ['files',
       'mdns4_minimal [NOTFOUND=return]',
       'dns']
@@ -73,26 +73,26 @@ class nsswitch::params {
       $rpc_default        = ['files']
       $services_default   = ['files']
       $shadow_default     = ['files']
-      $sudoers_default    = undef
+      $sudoers_default    = []
     }
     /Ubuntu|Debian/: {
-      $aliases_default    = undef
-      $automount_default  = undef
-      $bootparams_default = undef
+      $aliases_default    = []
+      $automount_default  = []
+      $bootparams_default = []
       $ethers_default     = ['db','files']
       $group_default      = ['compat']
       $gshadow_default    = ['files']
       $hosts_default      = ['files','dns']
       $netgroup_default   = ['nis']
-      $netmasks_default   = undef
+      $netmasks_default   = []
       $networks_default   = ['files']
       $passwd_default     = ['compat']
       $protocols_default  = ['db','files']
-      $publickey_default  = undef
+      $publickey_default  = []
       $rpc_default        = ['db','files']
       $services_default   = ['db','files']
       $shadow_default     = ['compat']
-      $sudoers_default    = undef
+      $sudoers_default    = []
     }
     'SLES': {
       $aliases_default    = ['files']
@@ -100,7 +100,7 @@ class nsswitch::params {
       $bootparams_default = ['files']
       $ethers_default     = ['files']
       $group_default      = ['compat']
-      $gshadow_default    = undef
+      $gshadow_default    = []
       $hosts_default      = ['files','dns']
       $netgroup_default   = ['files']
       $netmasks_default   = ['files']
@@ -110,13 +110,13 @@ class nsswitch::params {
       $publickey_default  = ['files']
       $rpc_default        = ['files']
       $services_default   = ['files']
-      $shadow_default     = undef
-      $sudoers_default    = undef
+      $shadow_default     = []
+      $sudoers_default    = []
     }
     'Solaris': {
       $passwd_default       = ['files','nisplus']
       $group_default        = ['files','nisplus']
-      $gshadow_default    = undef
+      $gshadow_default      = []
       $hosts_default        = ['files','dns','nisplus']
       $services_default     = ['nisplus','files']
       $networks_default     = ['nisplus','files']
@@ -129,6 +129,8 @@ class nsswitch::params {
       $netgroup_default     = ['nisplus']
       $automount_default    = ['files','nisplus']
       $aliases_default      = ['files','nisplus']
+      $shadow_default       = []
+      $sudoers_default      = []
     }
     'Gentoo': {
       $aliases_default    = ['files']
@@ -136,18 +138,18 @@ class nsswitch::params {
       $bootparams_default = ['files']
       $ethers_default     = ['db','files']
       $group_default      = ['compat']
-      $gshadow_default    = undef
+      $gshadow_default    = []
       $hosts_default      = ['files','dns']
       $netgroup_default   = ['files']
       $netmasks_default   = ['files']
       $networks_default   = ['files','dns']
       $passwd_default     = ['compat']
       $protocols_default  = ['db','files']
-      $publickey_default  = undef
+      $publickey_default  = []
       $rpc_default        = ['db','files']
       $services_default   = ['db','files']
       $shadow_default     = ['compat']
-      $sudoers_default    = undef
+      $sudoers_default    = []
     }
     default: {
       fail("${::operatingsystem} is not a supported operating system.")
