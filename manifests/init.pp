@@ -28,6 +28,21 @@
 #   Ethernet numbers.
 #   *Optional* (defaults to $nsswitch::params::ethers_default)
 #
+# [*file_group*]
+#
+#   Group of the nsswitch.conf file
+#   *Optional* (defaults to $nsswitch::params::file_group)
+#
+# [*file_owner*]
+#
+#   Owner of the nsswitch.conf file
+#   *Optional* (defaults to $nsswitch::params::file_owner)
+#
+# [*file_perms*]
+#
+#   Permissions for the nsswitch.conf file
+#   *Optional* (defaults to $nsswitch::params::file_perms)
+#
 # [*group*]
 #
 #   Groups of users, used by getgrent() and related functions.
@@ -85,6 +100,11 @@
 #   Network services, used by getservent() and related functions.
 #   *Optional* (defaults to $nsswitch::params::services_default)
 #
+# [*shells*]
+#
+#   Valid user shells, used by getusershell() and related functions.
+#   *Optional* (defaults to $nsswitch::params::shells_default)
+#
 # [*shadow*]
 #
 #   Shadow user passwords, used by getspnam() and related functions.
@@ -120,6 +140,9 @@ class nsswitch (
   $automount  = $nsswitch::params::automount_default,
   $bootparams = $nsswitch::params::bootparams_default,
   $ethers     = $nsswitch::params::ethers_default,
+  $file_group = $nsswitch::params::file_group,
+  $file_owner = $nsswitch::params::file_owner,
+  $file_perms = $nsswitch::params::file_perms,
   $group      = $nsswitch::params::group_default,
   $gshadow    = $nsswitch::params::gshadow_default,
   $hosts      = $nsswitch::params::hosts_default,
@@ -132,6 +155,7 @@ class nsswitch (
   $rpc        = $nsswitch::params::rpc_default,
   $services   = $nsswitch::params::services_default,
   $shadow     = $nsswitch::params::shadow_default,
+  $shells     = $nsswitch::params::shells_default,
   $sudoers    = $nsswitch::params::sudoers_default,
 ) inherits nsswitch::params {
 
@@ -199,6 +223,10 @@ class nsswitch (
   if $shadow {
     validate_multi($shadow,'string','array')
   }
+  # Determine the value for Shadow
+  if $shells {
+    validate_multi($shells,'string','array')
+  }
   # Determine the value for Sudoers
   if $sudoers {
     validate_multi($sudoers,'string','array')
@@ -207,9 +235,9 @@ class nsswitch (
   file { 'nsswitch.conf':
     ensure  => file,
     path    => '/etc/nsswitch.conf',
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
+    owner   => $file_owner,
+    group   => $file_group,
+    mode    => $file_perms,
     content => template('nsswitch/nsswitch.conf.erb'),
   }
 }
