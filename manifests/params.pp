@@ -116,7 +116,7 @@ class nsswitch::params {
     'Solaris': {
       $passwd_default       = ['files','nisplus']
       $group_default        = ['files','nisplus']
-      $gshadow_default    = undef
+      $gshadow_default      = undef
       $hosts_default        = ['files','dns','nisplus']
       $services_default     = ['nisplus','files']
       $networks_default     = ['nisplus','files']
@@ -129,6 +129,7 @@ class nsswitch::params {
       $netgroup_default     = ['nisplus']
       $automount_default    = ['files','nisplus']
       $aliases_default      = ['files','nisplus']
+      $shadow_default       = undef
     }
     'Gentoo': {
       $aliases_default    = ['files']
