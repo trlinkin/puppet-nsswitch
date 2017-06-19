@@ -14,7 +14,7 @@ describe 'nsswitch', :type => :class do
 
     context 'version 6' do
       let(:facts) do
-        super().merge({:operatingsystemimajrelease => '6'})
+        super().merge({:operatingsystemmajrelease => '6'})
       end
       it { is_expected.to compile.with_all_deps }
       it { is_expected.to have_resource_count(1) }
