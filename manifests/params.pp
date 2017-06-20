@@ -130,6 +130,7 @@ class nsswitch::params {
       $automount_default    = ['files','nisplus']
       $aliases_default      = ['files','nisplus']
       $shadow_default       = undef
+      $sudoers_default      = undef
     }
     'Gentoo': {
       $aliases_default    = ['files']
