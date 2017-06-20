@@ -136,8 +136,8 @@ class nsswitch (
   file { 'nsswitch.conf':
     ensure  => file,
     path    => '/etc/nsswitch.conf',
-    owner   => 'root',
-    group   => 'root',
+    owner   => '0',
+    group   => '0',
     mode    => '0644',
     content => epp('nsswitch/nsswitch.conf.epp'),
   }
