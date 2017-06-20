@@ -106,7 +106,24 @@ class { 'nsswitch':
     aliases:    files nisplus
 
 ### Changelog
-
+* Bump Version to 2.0.0 and amend change log
+* Update README with Puppet 4 compatibility message
+* Simplify the TravisCI matrix
+* Add default for "sudoers" database to Solaris
+* Add default shadow value of "undef" for Solaris
+* Correct typo in unit tests
+* Use $facts for all fact access
+* Update travis configuration
+* Remove dependencies from metadata.json
+* Ensure puppet-lint used is 2.0.0 or higher
+* Update metadata CI job
+* Update automated testing for Puppet 4 features
+* Use Puppet 4 style facts
+* Move from ERB to EPP templates
+* Update TravisCI to test only Puppet 4+
+* Merge branch 'puppet4' into 2.x.x
+* Add support for CloudLinux distributions
+* Bump version to 1.2.0 and update changelog
 * Change quoting of string in `params.pp`
 * Correct `.travis.yml` tests
 * Add unit tests for different EL versions
