@@ -5,6 +5,13 @@ A way of expressing nsswitch.conf configurations declaratively. This
 should manage the standard 15 databases NSS supports, plus the `sudo` entry
 respected by sudo since the 1.7.0 release.
 
+### Updated for Puppet 4 - No Puppet 3 Compatibility
+
+The 2.x series of this module officially adopts the Puppet 4 parser syntax and
+other new Puppet features. The 2.x series will no longer work with Puppet 3 or
+earlier. One benefit is the removal of dependency the `trlinkin-validate_multi`
+module.
+
 ### Defaults
 
 Currently this module has support for EL based Linux distributions,
@@ -33,7 +40,7 @@ Testing has only confirmed functionality on the following:
 #### nsswitch class
 
 This is the class by which you will manage the nsswitch.conf file. There
-is one paramter per standard database NSS supports. The class accepts both strings 
+is one paramter per standard database NSS supports. The class accepts both strings
 and arrays as paramters. The benefit being, you could possibly merge an array
 of options with hiera. When using an array, each element should be the
 lookup service followed by the reaction statement.
