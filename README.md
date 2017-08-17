@@ -106,6 +106,9 @@ class { 'nsswitch':
     aliases:    files nisplus
 
 ### Changelog
+* Bump version to 2.0.1
+* Provide data type alias to improve readability
+* Convert docs to puppet strings format
 * Bump Version to 2.0.0 and amend change log
 * Update README with Puppet 4 compatibility message
 * Simplify the TravisCI matrix
