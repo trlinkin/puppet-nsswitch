@@ -14,18 +14,28 @@
   ],
   "operatingsystem_support": [
     {
-    "operatingsystem": "RedHat",
-    "operatingsystemrelease": [
-      "5.0",
-      "6.0",
-      "7.0"
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
       ]
     },
     {
-      "operatingsystem": "CentOS"
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
     },
     {
-      "operatingsystem": "OracleLinux"
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
     },
     {
       "operatingsystem": "CloudLinux"
@@ -34,7 +44,12 @@
       "operatingsystem": "Amazon"
     },
     {
-      "operatingsystem": "Scientific"
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
     },
     {
       "operatingsystem": "Ubuntu",
@@ -58,14 +73,11 @@
   ],
   "requirements": [
     {
-      "name": "facter",
-      "version_requirement": ">= 1.7.0"
-    },
-    {
       "name": "puppet",
-      "version_requirement": ">= 4.0.0"
+      "version_requirement": ">= 4.0.0 < 6.0.0"
     }
   ],
   "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">= 4.3.2 < 6.0.0"}
   ]
 }
