@@ -21,7 +21,7 @@ This module should be capable of supporting the following systems:
  * Fedora
  * Oracle Linux 5.x, 6.x
  * Gentoo
- * FreeBSD
+ * FreeBSD 10.3, 10.4, 11.1
 
 Testing has only confirmed functionality on the following:
   * Ubuntu 12.4
