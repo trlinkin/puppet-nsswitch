@@ -21,6 +21,7 @@ This module should be capable of supporting the following systems:
  * Fedora
  * Oracle Linux 5.x, 6.x
  * Gentoo
+ * FreeBSD
 
 Testing has only confirmed functionality on the following:
   * Ubuntu 12.4
@@ -33,8 +34,8 @@ Testing has only confirmed functionality on the following:
 #### nsswitch class
 
 This is the class by which you will manage the nsswitch.conf file. There
-is one paramter per standard database NSS supports. The class accepts both strings 
-and arrays as paramters. The benefit being, you could possibly merge an array
+is one parameter per standard database NSS supports. The class accepts both strings
+and arrays as parameters. The benefit being, you could possibly merge an array
 of options with hiera. When using an array, each element should be the
 lookup service followed by the reaction statement.
 
@@ -55,6 +56,7 @@ Available parameters are:
 * publickey
 * rpc
 * services
+* shells
 * sudo
 
 
@@ -100,6 +102,8 @@ class { 'nsswitch':
 
 ### Changelog
 
+* Add FreeBSD support
+* Add the ability to set the **shells** value
 * Change quoting of string in `params.pp`
 * Correct `.travis.yml` tests
 * Add unit tests for different EL versions
@@ -149,4 +153,3 @@ class { 'nsswitch':
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
