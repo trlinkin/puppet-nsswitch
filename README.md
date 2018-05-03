@@ -31,6 +31,7 @@ the AIO (all in one installer). For an exact matrix see `.travis.yml`.
  * EL 5, 6 and 7
  * Fedora
  * Gentoo
+ * FreeBSD
 
 Testing has only confirmed functionality on the following:
   * Ubuntu 12.4
@@ -43,8 +44,8 @@ Testing has only confirmed functionality on the following:
 #### nsswitch class
 
 This is the class by which you will manage the nsswitch.conf file. There
-is one paramter per standard database NSS supports. The class accepts both strings
-and arrays as paramters. The benefit being, you could possibly merge an array
+is one parameter per standard database NSS supports. The class accepts both strings
+and arrays as parameters. The benefit being, you could possibly merge an array
 of options with hiera. When using an array, each element should be the
 lookup service followed by the reaction statement.
 
@@ -65,6 +66,7 @@ Available parameters are:
 * publickey
 * rpc
 * services
+* shells
 * sudo
 
 

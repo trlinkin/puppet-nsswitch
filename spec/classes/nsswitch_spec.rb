@@ -29,7 +29,7 @@ describe 'nsswitch', :type => :class do
     end
   end
 
-  context 'when used on an unsupported Operatin System' do
+  context 'when used on an unsupported Operating System' do
     let(:facts) { {:operatingsystem => 'unsupported' } }
     it do
       expect{ catalogue }.to raise_error(/is not a supported operating system\./)
