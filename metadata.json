@@ -2,15 +2,16 @@
   "name": "trlinkin-nsswitch",
   "version": "2.0.0",
   "author": "Thomas Linkin",
-  "license": "Apache-2.0",
   "summary": "Module for managing nsswitch.conf",
+  "license": "Apache-2.0",
   "source": "https://github.com/trlinkin/puppet-nsswitch",
   "project_page": "https://github.com/trlinkin/puppet-nsswitch",
   "issues_url": "https://github.com/trlinkin/puppet-nsswitch/issues",
-  "tags": [
-    "linux",
-    "nsswitch",
-    "authentication"
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.3.2 < 6.0.0"
+    }
   ],
   "operatingsystem_support": [
     {
@@ -77,7 +78,12 @@
       "version_requirement": ">= 4.0.0 < 6.0.0"
     }
   ],
-  "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 4.3.2 < 6.0.0"}
-  ]
+  "tags": [
+    "linux",
+    "nsswitch",
+    "authentication"
+  ],
+  "pdk-version": "1.4.1",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.4.1-0-g52adbbb"
 }
