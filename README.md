@@ -22,11 +22,14 @@ on the mentioned distributions by the kindness and diligence of
 contributors, of which I'm very grateful.
 
 ### Supported Systems
-This module should be capable of supporting the following systems:
+
+This module should be capable of supporting the following systems using
+Puppet versions 4 and 5 with the ruby versions that are released with
+the AIO (all in one installer). For an exact matrix see `.travis.yml`.
+
  * Debian/Ubuntu
- * RHEL (Centos, RHEL6.x, Amazon)
+ * EL 5, 6 and 7
  * Fedora
- * Oracle Linux 5.x, 6.x
  * Gentoo
  * FreeBSD
 
@@ -71,7 +74,7 @@ For more information on NSS, please see the man pages. `man 5 nsswitch.conf`
 
 #### Examples
 
-```Puppet
+```puppet
 # defaults only
 include nsswitch
 
@@ -106,74 +109,3 @@ class { 'nsswitch':
     publickey:  nisplus
     automount:  files nisplus
     aliases:    files nisplus
-
-### Changelog
-* Add FreeBSD support
-* Add the ability to set the **shells** value
-* Bump Version to 2.0.0 and amend change log
-* Update README with Puppet 4 compatibility message
-* Simplify the TravisCI matrix
-* Add default for "sudoers" database to Solaris
-* Add default shadow value of "undef" for Solaris
-* Correct typo in unit tests
-* Use $facts for all fact access
-* Update travis configuration
-* Remove dependencies from metadata.json
-* Ensure puppet-lint used is 2.0.0 or higher
-* Update metadata CI job
-* Update automated testing for Puppet 4 features
-* Use Puppet 4 style facts
-* Move from ERB to EPP templates
-* Update TravisCI to test only Puppet 4+
-* Merge branch 'puppet4' into 2.x.x
-* Add support for CloudLinux distributions
-* Bump version to 1.2.0 and update changelog
-* Change quoting of string in `params.pp`
-* Correct `.travis.yml` tests
-* Add unit tests for different EL versions
-* Cleanup metadata tabbing and add EL 7 version
-* Add Puppet/PE requirements to metadata.json
-* Add explicit support for EL 7
-* Change tabbing in params.pp
-* Remove undesirable tags from metadata
-* Merge pull request #15 from togge/master
-* added support for gshadow
-* Update Changelog and bump version to 1.1.0
-* Extend Travis-CI testing
-* Updates to the README.md
-* Fixup the travis-ci configuration
-* Removing Gemfile.lock - I was wrong
-* Update spec tests to use Rspec 3.x syntax
-* Refactor unit tests for changes in Rspec/Rspec-Puppet
-* Add changes to Gemfile and add a Gemfile.lock
-* Remove Gemfile.lock from the .gitignore
-* Fix fact name in spec tests
-* Add fixtures to .gitignore
-* add OEL supprt
-* making changes to pass lint
-* Bump version to 1.0.0
-* Adding license file
-* Further clean up metadata.json
-* Add travis-ci badge
-* Correct wrong link in metadata.json
-* Add .travis.yml for automated Travis-CI testing
-* Add .rspec file for testing purposes
-* Bump version to 0.1.0 for release
-* Convert to metadata.json
-* Add initial components of automated testing
-* Remove useless filename selection
-
-#### License
-   Copyright 2013 Thomas Linkin <tom@puppetlabs.com>
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-     http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.

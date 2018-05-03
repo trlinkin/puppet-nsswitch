@@ -1,4 +1,6 @@
-Copyright 2012-2014 Thomas Linkin
+Copyright (C) 2012-2014 Thomas Linkin <tom@puppetlabs.com>
+Copyright (C) 2013 Marcellus Siegburg <msiegbur@imn.htwk-leipzig.de>
+Copyright (C) 2017 Garrett Honeycutt <code@garretthoneycutt.com>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

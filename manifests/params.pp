@@ -1,10 +1,6 @@
-# Provides default values for the nsswitch module according to the
-# operatingsystem being used.
-#
-# @author Thomas Linkin <tom@puppetlabs.com>
-# @author Marcellus Siegburg <msiegbur@imn.htwk-leipzig.de>
-#
-# Copyright 2013 Thomas Linkin, Marcellus Siegburg
+# @summary nsswitch::params class
+#   Provides default values for the nsswitch module according to the
+#   operatingsystem being used.
 #
 class nsswitch::params {
 
