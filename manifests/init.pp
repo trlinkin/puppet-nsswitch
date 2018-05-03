@@ -1,7 +1,16 @@
-# This module creates a /etc/nsswitch.conf file whith all the lines that
-# determine the sources from which to obtain name-service information in a range
-# of categories, and in what order. For further information look into manual
-# pages.
+# @summary nsswitch class
+#   This module creates a /etc/nsswitch.conf file whith all the lines that
+#   determine the sources from which to obtain name-service information in a
+#   range of categories, and in what order. For further information look into
+#   manual pages.
+#
+# @example Basic example
+#    include nsswitch
+#
+#    class { 'nsswitch':
+#      passwd => ['ldap','files'],
+#      hosts  => ['dns [!UNAVAIL=return]','files'],
+#    }
 #
 # @param aliases
 #
@@ -90,19 +99,6 @@
 #
 #   Sudoers policy module users.
 #   *Variant* (defaults to $nsswitch::params::sudoers_default)
-#
-# @example Basic example
-#    include nsswitch
-#
-#    class { 'nsswitch':
-#      passwd => ['ldap','files'],
-#      hosts  => ['dns [!UNAVAIL=return]','files'],
-#    }
-#
-# @author Thomas Linkin <tom@puppetlabs.com>
-# @author Marcellus Siegburg <msiegbur@imn.htwk-leipzig.de>
-#
-# Copyright 2013 Thomas Linkin, Marcellus Siegburg
 #
 class nsswitch (
   Variant[String, Array, Undef] $aliases    = $nsswitch::params::aliases_default,
