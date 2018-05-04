@@ -29,11 +29,12 @@ the AIO (all in one installer). For an exact matrix see `.travis.yml`.
 
  * Debian/Ubuntu 10.04, 12.04
  * Solaris 10, 11, 11.1, 11.2, 11.3
- * EL 6 and 7
- * Fedora
+ * Variants of Enterprise Linux 6 and 7 (Such as Amazon Linux, Scientific Linux, etc)
+ * Fedora (defaults need validation)
  * Gentoo
  * FreeBSD 10.3, 10.4, 11.1
  * LinuxMint 17.2
+ * SLES 11, 12
 
 Testing has only confirmed functionality on the following:
   * Ubuntu 12.4
