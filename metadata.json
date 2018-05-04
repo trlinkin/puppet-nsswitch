@@ -17,7 +17,6 @@
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "5",
         "6",
         "7"
       ]
@@ -25,7 +24,6 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "5",
         "6",
         "7"
       ]
@@ -33,13 +31,16 @@
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
-        "5",
         "6",
         "7"
       ]
     },
     {
       "operatingsystem": "CloudLinux"
+      "operatingsystemrelease: [
+        "6",
+        "7"
+      ]
     },
     {
       "operatingsystem": "Amazon"
@@ -47,7 +48,6 @@
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
-        "5",
         "6",
         "7"
       ]
