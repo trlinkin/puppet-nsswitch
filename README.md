@@ -27,8 +27,9 @@ This module should be capable of supporting the following systems using
 Puppet versions 4 and 5 with the ruby versions that are released with
 the AIO (all in one installer). For an exact matrix see `.travis.yml`.
 
- * Debian/Ubuntu
- * EL 5, 6 and 7
+ * Debian/Ubuntu 10.04, 12.04
+ * Solaris 10, 11, 11.1, 11.2, 11.3
+ * EL 6 and 7
  * Fedora
  * Gentoo
  * FreeBSD 10.3, 10.4, 11.1
