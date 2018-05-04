@@ -70,6 +70,14 @@
     },
     {
       "operatingsystem": "Gentoo"
+    },
+    {
+      "operatingsystem": "FreeBSD",
+      "operatingsystemrelease": [
+        "10.3",
+        "10.4",
+        "11.1"
+      ]
     }
   ],
   "requirements": [

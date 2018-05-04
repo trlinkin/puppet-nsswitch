@@ -31,7 +31,7 @@ the AIO (all in one installer). For an exact matrix see `.travis.yml`.
  * EL 5, 6 and 7
  * Fedora
  * Gentoo
- * FreeBSD
+ * FreeBSD 10.3, 10.4, 11.1
 
 Testing has only confirmed functionality on the following:
   * Ubuntu 12.4
