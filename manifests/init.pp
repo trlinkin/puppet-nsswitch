@@ -33,6 +33,21 @@
 #   Ethernet numbers.
 #   *Variant* (defaults to $nsswitch::params::ethers_default)
 #
+# @param file_group
+#
+#   Group of the nsswitch.conf file
+#   *Optional* (defaults to $nsswitch::params::file_group)
+#
+# @param file_owner
+#
+#   Owner of the nsswitch.conf file
+#   *Optional* (defaults to $nsswitch::params::file_owner)
+#
+# @param file_perms
+#
+#   Permissions for the nsswitch.conf file
+#   *Optional* (defaults to $nsswitch::params::file_perms)
+#
 # @param group
 #
 #   Groups of users, used by getgrent() and related functions.
@@ -95,6 +110,11 @@
 #   Shadow user passwords, used by getspnam() and related functions.
 #   *Variant* (defaults to $nsswitch::params::shadow_default)
 #
+# @param shells
+#
+#   Valid user shells, used by getusershell() and related functions.
+#   *Optional* (defaults to $nsswitch::params::shells_default)
+#
 # @param sudoers
 #
 #   Sudoers policy module users.
@@ -105,6 +125,9 @@ class nsswitch (
   Variant[String, Array, Undef] $automount  = $nsswitch::params::automount_default,
   Variant[String, Array, Undef] $bootparams = $nsswitch::params::bootparams_default,
   Variant[String, Array, Undef] $ethers     = $nsswitch::params::ethers_default,
+  Variant[String, Undef] $file_group        = $nsswitch::params::file_group,
+  Variant[String, Undef] $file_owner        = $nsswitch::params::file_owner,
+  Variant[String, Undef] $file_perms        = $nsswitch::params::file_perms,
   Variant[String, Array, Undef] $group      = $nsswitch::params::group_default,
   Variant[String, Array, Undef] $hosts      = $nsswitch::params::hosts_default,
   Variant[String, Array, Undef] $netgroup   = $nsswitch::params::netgroup_default,
@@ -116,6 +139,7 @@ class nsswitch (
   Variant[String, Array, Undef] $rpc        = $nsswitch::params::rpc_default,
   Variant[String, Array, Undef] $services   = $nsswitch::params::services_default,
   Variant[String, Array, Undef] $shadow     = $nsswitch::params::shadow_default,
+  Variant[String, Array, Undef] $shells     = $nsswitch::params::shells_default,
   Variant[String, Array, Undef] $gshadow    = $nsswitch::params::gshadow_default,
   Variant[String, Array, Undef] $sudoers    = $nsswitch::params::sudoers_default,
 ) inherits nsswitch::params {
@@ -123,9 +147,9 @@ class nsswitch (
   file { 'nsswitch.conf':
     ensure  => file,
     path    => '/etc/nsswitch.conf',
-    owner   => '0',
-    group   => '0',
-    mode    => '0644',
+    owner   => $file_owner,
+    group   => $file_group,
+    mode    => $file_perms,
     content => epp('nsswitch/nsswitch.conf.epp'),
   }
 }
