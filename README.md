@@ -32,6 +32,7 @@ the AIO (all in one installer). For an exact matrix see `.travis.yml`.
  * Fedora
  * Gentoo
  * FreeBSD 10.3, 10.4, 11.1
+ * LinuxMint 17.2
 
 Testing has only confirmed functionality on the following:
   * Ubuntu 12.4

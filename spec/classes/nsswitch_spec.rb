@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'nsswitch', :type => :class do
-  %w{CentOS RedHat Amazon CloudLinux OracleLinux Scientific Fedora SLES Solaris Debian Ubuntu Gentoo}.each do |os|
+  %w{CentOS RedHat Amazon CloudLinux OracleLinux Scientific Fedora SLES Solaris Debian Ubuntu Gentoo LinuxMint}.each do |os|
     context "when used with default parameter on #{os}" do
       let(:facts) { {:operatingsystem => os } }
       it { is_expected.to compile.with_all_deps }
