@@ -194,6 +194,27 @@ class nsswitch::params {
       $shells_default     = ['files']
       $sudoers_default    = undef
     }
+    'LinuxMint': {
+      $file_group         = 'root'
+      $aliases_default    = undef
+      $automount_default  = undef
+      $bootparams_default = undef
+      $ethers_default     = ['db','files']
+      $group_default      = ['compat']
+      $gshadow_default    = undef
+      $hosts_default      = ['files','mdns4_minimal [NOTFOUND=return]','dns']
+      $netgroup_default   = ['nis']
+      $netmasks_default   = undef
+      $networks_default   = ['files']
+      $passwd_default     = ['compat']
+      $protocols_default  = ['db','files']
+      $publickey_default  = undef
+      $rpc_default        = ['db','files']
+      $services_default   = ['db','files']
+      $shadow_default     = ['compat']
+      $shells_default     = undef
+      $sudoers_default    = undef
+    }
     default: {
       fail("${::operatingsystem} is not a supported operating system.")
     }

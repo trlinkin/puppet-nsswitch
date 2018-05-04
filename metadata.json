@@ -67,6 +67,12 @@
         "10.4",
         "11.1"
       ]
+    },
+    {
+      "operatingsystem": "LinuxMint",
+      "operatingsystemrelease": [
+        "17.2"
+      ]
     }
   ],
   "requirements": [

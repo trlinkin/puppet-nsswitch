@@ -22,6 +22,7 @@ This module should be capable of supporting the following systems:
  * Oracle Linux 5.x, 6.x
  * Gentoo
  * FreeBSD 10.3, 10.4, 11.1
+ * LinuxMint 17.2
 
 Testing has only confirmed functionality on the following:
   * Ubuntu 12.4
