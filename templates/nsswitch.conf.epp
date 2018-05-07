@@ -54,3 +54,6 @@ aliases:    <%= [*$::nsswitch::aliases].join(" ") %>
 <% if $::nsswitch::shells { -%>
 shells:    <%= [*$::nsswitch::shells].join(" ") %>
 <% } -%>
+<% if $::nsswitch::initgroups { -%>
+initgroups:    <%= [*$::nsswitch::initgroups].join(" ") %>
+<% } -%>

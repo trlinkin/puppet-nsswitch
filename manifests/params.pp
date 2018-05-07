@@ -40,6 +40,7 @@ class nsswitch::params {
       $rpc_default        = ['files']
       $shells_default     = undef
       $sudoers_default    = undef
+      $initgroups         = undef
     }
     'Fedora': {
       $aliases_default    = ['files','nisplus']
@@ -63,6 +64,7 @@ class nsswitch::params {
       $shadow_default     = ['files']
       $shells_default     = undef
       $sudoers_default    = undef
+      $initgroups         = undef
     }
     /Ubuntu|Debian/: {
       $aliases_default    = undef
@@ -84,6 +86,7 @@ class nsswitch::params {
       $shadow_default     = ['compat']
       $shells_default     = undef
       $sudoers_default    = undef
+      $initgroups         = undef
     }
     'SLES': {
       $aliases_default    = ['files']
@@ -105,6 +108,7 @@ class nsswitch::params {
       $shadow_default     = undef
       $shells_default     = undef
       $sudoers_default    = undef
+      $initgroups         = undef
     }
     'Solaris': {
       $aliases_default    = ['files','nisplus']
@@ -126,6 +130,7 @@ class nsswitch::params {
       $shadow_default     = undef
       $shells_default     = undef
       $sudoers_default    = undef
+      $initgroups         = undef
     }
     'Gentoo': {
       $aliases_default    = ['files']
@@ -147,6 +152,7 @@ class nsswitch::params {
       $shadow_default     = ['compat']
       $shells_default     = undef
       $sudoers_default    = undef
+      $initgroups         = undef
     }
     'FreeBSD': {
       $aliases_default    = undef
@@ -168,6 +174,7 @@ class nsswitch::params {
       $shadow_default     = undef
       $shells_default     = ['files']
       $sudoers_default    = undef
+      $initgroups         = undef
     }
     'LinuxMint': {
       $file_group         = 'root'
@@ -189,6 +196,7 @@ class nsswitch::params {
       $shadow_default     = ['compat']
       $shells_default     = undef
       $sudoers_default    = undef
+      $initgroups         = undef
     }
     default: {
       fail("${facts['operatingsystem']} is not a supported operating system.")

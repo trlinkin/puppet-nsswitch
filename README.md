@@ -58,6 +58,7 @@ Available parameters are:
 * group
 * shadow
 * hosts
+* initgroups
 * bootparams
 * aliases
 * automount
