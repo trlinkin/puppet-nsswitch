@@ -1,6 +1,6 @@
 {
   "name": "trlinkin-nsswitch",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": "Thomas Linkin",
   "summary": "Module for managing nsswitch.conf",
   "license": "Apache-2.0",
@@ -129,7 +129,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.0.0 < 6.0.0"
+      "version_requirement": ">= 4.0.0 < 7.0.0"
     }
   ],
   "tags": [
