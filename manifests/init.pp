@@ -120,6 +120,11 @@
 #   Sudoers policy module users.
 #   *Variant* (defaults to $nsswitch::params::sudoers_default)
 #
+# @param file_path
+#
+#   Path to the nsswitch.conf.
+#   *Abolutepath* (defaults to $nsswitch::params::file_path)
+#
 class nsswitch (
   Variant[String, Array, Undef] $aliases    = $nsswitch::params::aliases_default,
   Variant[String, Array, Undef] $automount  = $nsswitch::params::automount_default,
@@ -142,11 +147,12 @@ class nsswitch (
   Variant[String, Array, Undef] $shells     = $nsswitch::params::shells_default,
   Variant[String, Array, Undef] $gshadow    = $nsswitch::params::gshadow_default,
   Variant[String, Array, Undef] $sudoers    = $nsswitch::params::sudoers_default,
+  Stdlib::Absolutepath $file_path           = $nsswitch::params::file_path,
 ) inherits nsswitch::params {
 
   file { 'nsswitch.conf':
     ensure  => file,
-    path    => '/etc/nsswitch.conf',
+    path    => $file_path,
     owner   => $file_owner,
     group   => $file_group,
     mode    => $file_perms,

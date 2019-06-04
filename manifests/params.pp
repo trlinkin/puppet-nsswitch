@@ -4,6 +4,7 @@
 #
 class nsswitch::params {
 
+  $file_path  = '/etc/nsswitch.conf'
   $file_owner = 'root'
   $file_perms = '0644'
 
@@ -25,6 +26,10 @@ class nsswitch::params {
 
         $services_default   = ['files']
         $netgroup_default   = ['nisplus']
+      }
+
+      if $facts[operatingsystemmajrelease] == '8' {
+        $file_path = '/etc/authselect/nsswitch.conf'
       }
 
       $aliases_default    = ['files','nisplus']
