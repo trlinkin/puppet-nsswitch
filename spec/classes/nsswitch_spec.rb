@@ -3,7 +3,12 @@ require 'spec_helper'
 describe 'nsswitch', type: :class do
   %w[CentOS RedHat Amazon CloudLinux OracleLinux Scientific Fedora SLES Solaris Debian Ubuntu Gentoo LinuxMint].each do |os|
     context "when used with default parameter on #{os}" do
-      let(:facts) { { operatingsystem: os } }
+      let(:facts) do
+        {
+          operatingsystem: os,
+          operatingsystemmajrelease: '6',
+        }
+      end
 
       it { is_expected.to compile.with_all_deps }
       it { is_expected.to have_resource_count(1) }
@@ -34,6 +39,15 @@ describe 'nsswitch', type: :class do
       it { is_expected.to compile.with_all_deps }
       it { is_expected.to have_resource_count(1) }
     end
+
+    context 'version 8' do
+      let(:facts) do
+        super().merge(operatingsystemmajrelease: '8')
+      end
+
+      it { is_expected.to compile.with_all_deps }
+      it { is_expected.to have_resource_count(1) }
+    end
   end
 
   context 'when used on an unsupported Operating System' do
@@ -52,6 +66,7 @@ describe 'nsswitch', type: :class do
     let(:facts) do
       {
         operatingsystem: 'CentOS',
+        operatingsystemmajrelease: '6',
       }
     end
 

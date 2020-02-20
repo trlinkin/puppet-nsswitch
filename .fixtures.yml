@@ -2,6 +2,6 @@ fixtures:
   repositories:
     stdlib:
       repo: "git://github.com/puppetlabs/puppetlabs-stdlib"
-      ref: "v6.2.0"
+      ref: "4.25.0"
   symlinks:
     nsswitch: "#{source_dir}"
