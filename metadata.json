@@ -13,6 +13,7 @@
       "version_requirement": ">= 4.25.0 < 7.0.0"
     }
   ],
+  "data_provider": null,
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
@@ -80,7 +81,7 @@
     },
     {
       "operatingsystem": "Debian",
-       "operatingsystemrelease": [
+      "operatingsystemrelease": [
         "12.04",
         "10.04"
       ]
@@ -127,6 +128,9 @@
         "27",
         "28"
       ]
+    },
+    {
+      "operatingsystem": "Archlinux"
     }
   ],
   "requirements": [
