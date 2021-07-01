@@ -29,7 +29,7 @@ the AIO (all in one installer). For an exact matrix see `.travis.yml`.
 
  * Debian/Ubuntu 10.04, 12.04
  * Solaris 10, 11, 11.1, 11.2, 11.3
- * Variants of Enterprise Linux 6 and 7 (Such as Amazon Linux, Scientific Linux, etc)
+ * Variants of Enterprise Linux 6, 7, and 8 (Such as Amazon Linux, Rocky Linux, Scientific Linux, etc)
  * Fedora (defaults need validation)
  * Gentoo
  * FreeBSD 10.3, 10.4, 11.1
