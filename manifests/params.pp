@@ -186,6 +186,27 @@ class nsswitch::params {
       $shells_default     = undef
       $sudoers_default    = undef
     }
+    'Archlinux': {
+      $file_group         = 'root'
+      $passwd_default     = ['files','mymachines','systemd']
+      $shadow_default     = ['files']
+      $group_default      = ['files','mymachines','systemd']
+      $automount_default  = undef
+      $services_default   = ['files']
+      $netgroup_default   = ['files']
+      $aliases_default    = undef
+      $bootparams_default = undef
+      $ethers_default     = ['files']
+      $gshadow_default    = undef
+      $hosts_default      = ['files','mymachines','myhostname','resolve [!UNAVAIL=return]','dns']
+      $netmasks_default   = undef
+      $networks_default   = ['files']
+      $protocols_default  = ['files']
+      $publickey_default  = ['files']
+      $rpc_default        = ['files']
+      $shells_default     = undef
+      $sudoers_default    = undef
+    }
     default: {
       fail("${facts['operatingsystem']} is not a supported operating system.")
     }
