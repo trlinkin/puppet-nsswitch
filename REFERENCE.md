@@ -119,6 +119,14 @@ Host names and numbers, used by gethostbyname() and related functions.
 
 Default value: $nsswitch::params::hosts_default
 
+##### `initgroups`
+
+Data type: `Optional[Variant[String, Array]]`
+
+Supplementary group access list, used by getgrouplist(3) function.
+
+Default value: $nsswitch::params::initgroups
+
 ##### `netgroup`
 
 Data type: `Optional[Variant[String, Array]]`

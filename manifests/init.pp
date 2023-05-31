@@ -45,6 +45,11 @@
 # @param hosts
 #   Host names and numbers, used by gethostbyname() and related functions.
 #
+# @param initgroups
+#
+#   Supplementary group access list, used by getgrouplist(3) function.
+#   *Optional* (defaults to $nsswitch::params::initgroups)
+#
 # @param netgroup
 #   Network-wide list of hosts and users, used for access rules.
 #
@@ -92,6 +97,7 @@ class nsswitch (
   Variant[String]                  $file_perms = '0644',
   Optional[Variant[String, Array]] $group      = $nsswitch::params::group_default,
   Optional[Variant[String, Array]] $hosts      = $nsswitch::params::hosts_default,
+  Optional[Variant[String, Array]] $initgroups = $nsswitch::params::initgroups,
   Optional[Variant[String, Array]] $netgroup   = $nsswitch::params::netgroup_default,
   Optional[Variant[String, Array]] $netmasks   = $nsswitch::params::netmasks_default,
   Optional[Variant[String, Array]] $networks   = $nsswitch::params::networks_default,
