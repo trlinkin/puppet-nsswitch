@@ -106,7 +106,6 @@ class nsswitch (
   Optional[Variant[String, Array]] $sudoers    = $nsswitch::params::sudoers_default,
   Stdlib::Unixpath                 $file_path  = '/etc/nsswitch.conf'
 ) inherits nsswitch::params {
-
   file { 'nsswitch.conf':
     ensure  => file,
     path    => $file_path,
