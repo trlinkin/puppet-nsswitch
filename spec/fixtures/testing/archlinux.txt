@@ -1,0 +1,13 @@
+# This file is controlled by Puppet
+
+passwd:     files mymachines systemd
+shadow:     files
+group:      files mymachines systemd
+hosts:      files mymachines myhostname resolve [!UNAVAIL=return] dns
+ethers:     files
+networks:   files
+protocols:  files
+rpc:        files
+services:   files
+netgroup:   files
+publickey:  files
