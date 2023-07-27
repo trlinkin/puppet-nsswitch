@@ -13,7 +13,6 @@
       "version_requirement": ">= 4.25.0 < 9.0.0"
     }
   ],
-  "data_provider": null,
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
@@ -102,12 +101,12 @@
     },
     {
       "operatingsystem": "Debian",
-       "operatingsystemrelease": [
-         "13",
-         "12",
-         "11",
-         "10",
-         "9"
+      "operatingsystemrelease": [
+        "13",
+        "12",
+        "11",
+        "10",
+        "9"
       ]
     },
     {
@@ -168,7 +167,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.0.0 < 8.0.0"
+      "version_requirement": ">= 4.0.0 < 9.0.0"
     }
   ],
   "tags": [
@@ -176,7 +175,7 @@
     "nsswitch",
     "authentication"
   ],
-  "pdk-version": "1.4.1",
-  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
-  "template-ref": "1.4.1-0-g52adbbb"
+  "pdk-version": "3.0.0",
+  "template-url": "pdk-default#3.0.0",
+  "template-ref": "tags/3.0.0-0-g056e50d"
 }

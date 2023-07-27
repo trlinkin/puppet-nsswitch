@@ -1,0 +1,14 @@
+---
+nsswitch::passwd:
+  - 'files'
+nsswitch::shadow:
+  - 'files'
+nsswitch::group:
+  - 'files'
+nsswitch::automount:
+  - 'files'
+  - 'nisplus'
+nsswitch::services:
+  - 'files'
+nsswitch::netgroup:
+  - 'nisplus'

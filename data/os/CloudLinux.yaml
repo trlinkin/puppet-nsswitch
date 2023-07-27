@@ -1,0 +1,40 @@
+---
+nsswitch::file_group: 'root'
+nsswitch::aliases:
+  - 'files'
+  - 'nisplus'
+nsswitch::automount:
+  - 'files'
+nsswitch::bootparams:
+  - 'nisplus [NOTFOUND=return]'
+  - 'files'
+nsswitch::ethers:
+  - 'files'
+nsswitch::hosts:
+  - 'files'
+  - 'dns'
+nsswitch::group:
+  - 'files'
+  - 'sss'
+nsswitch::netgroup:
+  - 'files'
+  - 'sss'
+nsswitch::netmasks:
+  - 'files'
+nsswitch::networks:
+  - 'files'
+nsswitch::passwd:
+  - 'files'
+  - 'sss'
+nsswitch::protocols:
+  - 'files'
+nsswitch::publickey:
+  - 'nisplus'
+nsswitch::rpc:
+  - 'files'
+nsswitch::services:
+  - 'files'
+  - 'sss'
+nsswitch::shadow:
+  - 'files'
+  - 'sss'

@@ -83,29 +83,37 @@
 # @param file_path
 #   The path to `nsswitch.conf` on the system.
 class nsswitch (
-  Optional[Variant[String, Array]] $aliases    = $nsswitch::params::aliases_default,
-  Optional[Variant[String, Array]] $automount  = $nsswitch::params::automount_default,
-  Optional[Variant[String, Array]] $bootparams = $nsswitch::params::bootparams_default,
-  Optional[Variant[String, Array]] $ethers     = $nsswitch::params::ethers_default,
-  Optional[Variant[String]]        $file_group = $nsswitch::params::file_group,
+  Optional[Variant[String, Array]] $aliases    = undef,
+  Optional[Variant[String, Array]] $automount  = undef,
+  Optional[Variant[String, Array]] $bootparams = undef,
+  Optional[Variant[String, Array]] $ethers     = undef,
+  Optional[Variant[String]]        $file_group = undef,
   Variant[String]                  $file_owner = 'root',
   Variant[String]                  $file_perms = '0644',
-  Optional[Variant[String, Array]] $group      = $nsswitch::params::group_default,
-  Optional[Variant[String, Array]] $hosts      = $nsswitch::params::hosts_default,
-  Optional[Variant[String, Array]] $netgroup   = $nsswitch::params::netgroup_default,
-  Optional[Variant[String, Array]] $netmasks   = $nsswitch::params::netmasks_default,
-  Optional[Variant[String, Array]] $networks   = $nsswitch::params::networks_default,
-  Optional[Variant[String, Array]] $passwd     = $nsswitch::params::passwd_default,
-  Optional[Variant[String, Array]] $protocols  = $nsswitch::params::protocols_default,
-  Optional[Variant[String, Array]] $publickey  = $nsswitch::params::publickey_default,
-  Optional[Variant[String, Array]] $rpc        = $nsswitch::params::rpc_default,
-  Optional[Variant[String, Array]] $services   = $nsswitch::params::services_default,
-  Optional[Variant[String, Array]] $shadow     = $nsswitch::params::shadow_default,
-  Optional[Variant[String, Array]] $shells     = $nsswitch::params::shells_default,
-  Optional[Variant[String, Array]] $gshadow    = $nsswitch::params::gshadow_default,
-  Optional[Variant[String, Array]] $sudoers    = $nsswitch::params::sudoers_default,
+  Optional[Variant[String, Array]] $group      = undef,
+  Optional[Variant[String, Array]] $hosts      = undef,
+  Optional[Variant[String, Array]] $netgroup   = undef,
+  Optional[Variant[String, Array]] $netmasks   = undef,
+  Optional[Variant[String, Array]] $networks   = undef,
+  Optional[Variant[String, Array]] $passwd     = undef,
+  Optional[Variant[String, Array]] $protocols  = undef,
+  Optional[Variant[String, Array]] $publickey  = undef,
+  Optional[Variant[String, Array]] $rpc        = undef,
+  Optional[Variant[String, Array]] $services   = undef,
+  Optional[Variant[String, Array]] $shadow     = undef,
+  Optional[Variant[String, Array]] $shells     = undef,
+  Optional[Variant[String, Array]] $gshadow    = undef,
+  Optional[Variant[String, Array]] $sudoers    = undef,
   Stdlib::Unixpath                 $file_path  = '/etc/nsswitch.conf'
-) inherits nsswitch::params {
+) {
+  case $facts['os']['name'] {
+    /AlmaLinux|CentOS|RedHat|Rocky|Amazon|OEL|OracleLinux|Scientific|CloudLinux|Fedora|
+    |Ubuntu|Debian|SLES|Solaris|Gentoo|FreeBSD|LinuxMint|Archlinux/: {
+    }
+    default: {
+      fail("${$facts['os']['name']} is not a supported operating system.")
+    }
+  }
 
   file { 'nsswitch.conf':
     ensure  => file,
