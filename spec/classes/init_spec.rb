@@ -33,7 +33,6 @@ describe 'nsswitch', type: :class do
       let(:facts) { facts }
 
       it { is_expected.to contain_class('nsswitch') }
-      it { is_expected.to contain_class('nsswitch::params') }
       it do
         is_expected.to contain_file('nsswitch.conf').only_with(
           'ensure'  => 'file',
