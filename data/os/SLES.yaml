@@ -1,5 +1,4 @@
 ---
-nsswitch::file_group: 'root'
 nsswitch::aliases:
   - 'files'
 nsswitch::automount:

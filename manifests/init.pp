@@ -83,13 +83,14 @@
 # @param file_path
 #   The path to `nsswitch.conf` on the system.
 class nsswitch (
+  Stdlib::Unixpath                 $file_path  = '/etc/nsswitch.conf'
+  String[1]                        $file_owner = 'root',
+  String[1]                        $file_group = 'root',
+  Stdlib::Filemode                 $file_perms = '0644',
   Optional[Variant[String, Array]] $aliases    = undef,
   Optional[Variant[String, Array]] $automount  = undef,
   Optional[Variant[String, Array]] $bootparams = undef,
   Optional[Variant[String, Array]] $ethers     = undef,
-  Optional[Variant[String]]        $file_group = undef,
-  Variant[String]                  $file_owner = 'root',
-  Variant[String]                  $file_perms = '0644',
   Optional[Variant[String, Array]] $group      = undef,
   Optional[Variant[String, Array]] $hosts      = undef,
   Optional[Variant[String, Array]] $netgroup   = undef,
@@ -104,7 +105,6 @@ class nsswitch (
   Optional[Variant[String, Array]] $shells     = undef,
   Optional[Variant[String, Array]] $gshadow    = undef,
   Optional[Variant[String, Array]] $sudoers    = undef,
-  Stdlib::Unixpath                 $file_path  = '/etc/nsswitch.conf'
 ) {
   case $facts['os']['name'] {
     /AlmaLinux|CentOS|RedHat|Rocky|Amazon|OEL|OracleLinux|Scientific|CloudLinux|Fedora|

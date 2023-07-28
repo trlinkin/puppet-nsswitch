@@ -1,5 +1,4 @@
 ---
-nsswitch::file_group: 'root'
 nsswitch::ethers:
   - 'files'
 nsswitch::group:
