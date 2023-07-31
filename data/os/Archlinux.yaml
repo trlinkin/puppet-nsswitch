@@ -1,0 +1,31 @@
+---
+nsswitch::ethers:
+  - 'files'
+nsswitch::group:
+  - 'files'
+  - 'mymachines'
+  - 'systemd'
+nsswitch::hosts:
+  - 'files'
+  - 'mymachines'
+  - 'myhostname'
+  - 'resolve [!UNAVAIL=return]'
+  - 'dns'
+nsswitch::netgroup:
+  - 'files'
+nsswitch::networks:
+  - 'files'
+nsswitch::passwd:
+  - 'files'
+  - 'mymachines'
+  - 'systemd'
+nsswitch::publickey:
+  - 'files'
+nsswitch::protocols:
+  - 'files'
+nsswitch::rpc:
+  - 'files'
+nsswitch::services:
+  - 'files'
+nsswitch::shadow:
+  - 'files'

@@ -1,0 +1,10 @@
+# This file is controlled by Puppet
+
+passwd:     compat
+group:      compat
+hosts:      files dns
+networks:   files
+protocols:  files
+rpc:        files
+services:   compat
+shells:     files

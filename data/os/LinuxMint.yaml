@@ -1,0 +1,27 @@
+---
+nsswitch::ethers:
+  - 'db'
+  - 'files'
+nsswitch::group:
+  - 'compat'
+nsswitch::hosts:
+  - 'files'
+  - 'mdns4_minimal [NOTFOUND=return]'
+  - 'dns'
+nsswitch::netgroup:
+  - 'nis'
+nsswitch::networks:
+  - 'files'
+nsswitch::passwd:
+  - 'compat'
+nsswitch::protocols:
+  - 'db'
+  - 'files'
+nsswitch::rpc:
+  - 'db'
+  - 'files'
+nsswitch::services:
+  - 'db'
+  - 'files'
+nsswitch::shadow:
+  - 'compat'

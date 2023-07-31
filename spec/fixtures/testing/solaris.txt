@@ -1,0 +1,16 @@
+# This file is controlled by Puppet
+
+passwd:     files nisplus
+group:      files nisplus
+hosts:      files dns nisplus
+bootparams: nisplus files
+ethers:     nisplus files
+netmasks:   files nisplus
+networks:   nisplus files
+protocols:  nisplus files
+rpc:        nisplus files
+services:   nisplus files
+netgroup:   nisplus
+publickey:  nisplus
+automount:  files nisplus
+aliases:    files nisplus

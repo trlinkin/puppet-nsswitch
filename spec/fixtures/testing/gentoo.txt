@@ -1,0 +1,16 @@
+# This file is controlled by Puppet
+
+passwd:     compat
+shadow:     compat
+group:      compat
+hosts:      files dns
+bootparams: files
+ethers:     db files
+netmasks:   files
+networks:   files dns
+protocols:  db files
+rpc:        db files
+services:   db files
+netgroup:   files
+automount:  files
+aliases:    files
