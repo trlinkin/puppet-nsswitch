@@ -7,4 +7,4 @@ networks:   files
 protocols:  files
 rpc:        files
 services:   compat
-shells:    files
+shells:     files
