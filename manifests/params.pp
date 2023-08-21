@@ -4,7 +4,7 @@
 #
 class nsswitch::params {
   case $facts['operatingsystem'] {
-    /AlmaLinux|CentOS|RedHat|Rocky|Amazon|OEL|OracleLinux|Scientific|CloudLinux/: {
+    /AlmaLinux|CentOS|RedHat|Rocky|Amazon|OEL|OracleLinux|Scientific|CloudLinux|openEuler/: {
       if versioncmp($facts[operatingsystemmajrelease], '6') > 0 {
         $passwd_default     = ['files','sss']
         $shadow_default     = ['files','sss']
