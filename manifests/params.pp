@@ -3,9 +3,9 @@
 #   operatingsystem being used.
 #
 class nsswitch::params {
-  case $facts['operatingsystem'] {
+  case $facts['os']['name'] {
     /AlmaLinux|CentOS|RedHat|Rocky|Amazon|OEL|OracleLinux|Scientific|CloudLinux/: {
-      if versioncmp($facts[operatingsystemmajrelease], '6') > 0 {
+      if versioncmp($facts['os']['release']['major'], '6') > 0 {
         $passwd_default     = ['files','sss']
         $shadow_default     = ['files','sss']
         $group_default      = ['files','sss']
@@ -208,7 +208,7 @@ class nsswitch::params {
       $sudoers_default    = undef
     }
     default: {
-      fail("${facts['operatingsystem']} is not a supported operating system.")
+      fail("${facts['os']['name']} is not a supported operating system.")
     }
   }
 }

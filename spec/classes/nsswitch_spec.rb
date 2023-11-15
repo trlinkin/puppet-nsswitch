@@ -5,8 +5,12 @@ describe 'nsswitch', type: :class do
     context "when used with default parameter on #{os}" do
       let(:facts) do
         {
-          operatingsystem: os,
-          operatingsystemmajrelease: '6',
+          os: {
+            name: os,
+            release: {
+              major: '6',
+            },
+          },
         }
       end
 
@@ -18,32 +22,31 @@ describe 'nsswitch', type: :class do
   context 'when used with default parameters on Enterprise Linux' do
     let(:facts) do
       {
-        operatingsystem: 'RedHat',
+        os: {
+          name: 'RedHat',
+          release: {
+            major: os_major,
+          },
+        },
       }
     end
 
     context 'version 6' do
-      let(:facts) do
-        super().merge(operatingsystemmajrelease: '6')
-      end
+      let(:os_major) { '6' }
 
       it { is_expected.to compile.with_all_deps }
       it { is_expected.to have_resource_count(1) }
     end
 
     context 'version 7' do
-      let(:facts) do
-        super().merge(operatingsystemmajrelease: '7')
-      end
+      let(:os_major) { '7' }
 
       it { is_expected.to compile.with_all_deps }
       it { is_expected.to have_resource_count(1) }
     end
 
     context 'version 8' do
-      let(:facts) do
-        super().merge(operatingsystemmajrelease: '8')
-      end
+      let(:os_major) { '8' }
 
       it { is_expected.to compile.with_all_deps }
       it { is_expected.to have_resource_count(1) }
@@ -53,7 +56,12 @@ describe 'nsswitch', type: :class do
   context 'when used on an unsupported Operating System' do
     let(:facts) do
       {
-        operatingsystem: 'unsupported',
+        os: {
+          name: 'unsupported',
+          release: {
+            major: '10',
+          },
+        },
       }
     end
 
@@ -65,8 +73,12 @@ describe 'nsswitch', type: :class do
   context 'when passed parameters' do
     let(:facts) do
       {
-        operatingsystem: 'CentOS',
-        operatingsystemmajrelease: '6',
+        os: {
+          name: 'CentOS',
+          release: {
+            major: '6',
+          },
+        },
       }
     end
 
